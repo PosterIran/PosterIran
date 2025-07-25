@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "public",  // این خط به Firebase می‌گوید که فایل‌های وب‌سایت شما در پوشه 'public' قرار دارند
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

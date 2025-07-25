@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>پوستر ایران</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" href="/icons/favicon.ico?v=1.0" type="image/x-icon">
+  <link rel="shortcut icon" href="/icons/favicon.ico?v=1.0" type="image/x-icon">
+
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167x167.png?v=1.0">
+
+  <link rel="manifest" href="/icons/manifest.json?v=1.0">
+  <meta name="theme-color" content="#2196f3">
+
+  <meta property="og:title" content="پوستر ایران">
+  <meta property="og:description" content="چاپ انواع پوسترهای آموزشی">
+  <meta property="og:image" content="/icons/og-image.jpg?v=1.0">
+  <meta property="og:url" content="https://akbari5561.github.io/PosterIran/">
+
+  <style>
+/* Import Vazirmatn font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Vazirmatn', sans-serif; /* Apply Vazirmatn font */
+      direction: rtl;
+      background: #E3F2FD; /* Softer background */
+      color: #333;
+      padding: 5000; /* Remove default body padding */
+      margin: 5000; /* Remove default body margin */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure body takes full viewport height */
+      align-items: center; /* Center content horizontally */
+      justify-content: center; /* Center content vertically */
+    }
+
+    /* Enhanced Hero Section for the main page */
+    #mainSection {
+        margin-top: 0; /* Remove default margin from old style */
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 900px; /* Max width for content */
+        padding: 40px 20px; /* More padding */
+        box-sizing: border-box;
+        background: linear-gradient(135deg, #BA68C8 20%, #6A1B9A 100%); /* Blue gradient background */
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* More prominent shadow */
+        text-align: center;
+        position: relative;
+        overflow: hidden; /* Hide overflowing pseudo-elements */
+    }
+
+    /* Animated background circles (optional, for extra graphical appeal) */
+    
+    #mainSection::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: #FFFFFF;
+        animation: bubble 30s infinite ease-in-out alternate;
+    }
+    #mainSection::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: #FFFFFF;
+    animation: bubble 15s infinite ease-in-out alternate;
+}
+    #mainSection::before {
+        width: 150px; height: 150px;
+        top: -50px; left: -50px;
+        animation-delay: 0s;
+    }
+    #mainSection::after {
+        width: 200px; height: 200px;
+        bottom: -60px; right: 190px;
+        animation-delay: 0s;
+    }
+    @keyframes bubble {
+        0% { transform: scale(1.4) translate(0, 0); opacity: 100.17; }
+        50% { transform: scale(1.2) translate(70px, -40px); opacity: 0.9; }
+        100% { transform: scale(0.8) translate(0, 0); opacity: 0.7; }
+    }
+    .main-title-container {
+        margin-bottom: 30px;
+        padding: 15px 30px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 2, 13, 0.66);
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Stack logo, h1, h2 */
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
+        
+    }
+
+    .header-logo {
+        max-width: 130px; /* Adjusted size for the new layout */
+        height: auto;
+        margin-bottom: -10px; /* Space between logo and title */
+    }
+
+    h1 {
+        color: #060606; /* Deeper blue for main title */
+        font-size: 2em; /* Larger font size */
+        margin: 0; /* Remove default margin */
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        letter-spacing: 1.5px;
+    }
+    h2 {
+        color: #FFFFFF; /* Slightly lighter blue for subtitle */
+        font-size: 1.2em;
+        margin-top: 10px; /* Space below h1 */
+        margin-bottom: 0px; /* No extra space below h2 */
+        
+    }
+    #subtitle {
+        font-size: 0.8em;
+        color: #0D0D0E;
+        margin-top: 5px;
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
+    }
+    #address {
+        background: rgba(255, 255, 255, 1);
+        padding: 8px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 0 2px 10px rgba(1, 1, 15, 0.78);
+        line-height: 1.8;
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
+    }
+    #address p {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #444;
+    }
+    #address a {
+        color: #444; /* Darker blue for links */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    #address a:hover {
+        color: #1976D2;
+    }
+
+    #loginSection {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px; /* Space between buttons */
+        position: relative; /* Add this */
+        z-index: 2; /* Add this: Higher z-index to be above pseudo-elements */
+    }
+    button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 4px 20px;
+    margin: 5px;
+    box-shadow: 0  2px 5px rgba(1, 1, 5);
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    button:hover {
+      background-color: #1976d2;
+      transform: translateY(-3px); /* Lift effect on hover */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    button.remove-btn {
+      background-color: #f44336;
+      box-shadow: none; /* No shadow for small buttons */
+    }
+    button.remove-btn:hover {
+      background-color: #d32f2f;
+      transform: none; /* No lift for small buttons */
+    }
+    button.clear-cart-btn {
+      background-color: #ff9800; /* Orange for clear cart */
+    }
+    button.clear-cart-btn:hover {
+      background-color: #fb8c00;
+    }
+    /* Style for quantity dropdowns in both gallery and cart */
+    .quantity-select {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      width: 70px; /* عرض ثابت برای جا شدن عدد چهار رقمی */
+      min-width: 50px; /* حداقل عرض مجاز */
+      max-width: 70px; /* حداکثر عرض مجاز */
+      box-sizing: border-box; /* برای اینکه پدینگ و بردر روی عرض حساب بشن */
+      text-align: center; /* متن داخلش وسط‌چین بشه */
+  }
+    /* Style for the Group Selection dropdown */
+    .group-select-fixed {
+    width: 150px;   /* عرض ثابت برای دروپ‌داون گروه */
+    min-width: 120px; /* حداقل عرض */
+    max-width: 200px; /* حداکثر عرض */
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    box-sizing: border-box; /* برای محاسبه درست عرض */
+    text-align: right; /* متن راست‌چین باشه */
+    }
+    /* Main sections styling */
+    #adminLogin, #gallery, #cartSection {
+        margin-top: 20px;
+        flex-grow: 1; /* Allow sections to take available space */
+        display: none; /* Hidden by default, controlled by JS */
+        flex-direction: column; /* For consistent layout */
+    }
+    /* استایل برای فیلدهای ورودی تعداد در گالری (جدید) */
+    .quantity-input {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      width: 60px; /* عرض ثابت برای جا شدن عدد سه رقمی */
+      min-width: 50px; /* حداقل عرض مجاز */
+      max-width: 70px; /* حداکثر عرض مجاز */
+      box-sizing: border-box; /* برای اینکه پدینگ و بردر روی عرض حساب بشن */
+      text-align: center; /* متن داخلش وسط‌چین بشه */
+    }
+    
+    /* Admin login is hidden by default, shown by JS only on title click */
+    #adminLogin {
+        display: none;
+    }
+    #cartSection {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: right;
+    }
+    #address {
+      margin-top: 10px;
+    }
+    .image-box {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #01579B;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(50% - 15px); /* Default for 2 items per row with gap */
+      box-sizing: border-box; /* Include padding/border in width */
+    }
+
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      flex-grow: 1; /* Allow container to grow */
+    }
+
+    img {
+      width: 100%;
+      height: auto; /* Reverted to auto for original aspect ratio */
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    select, input[type="password"] {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      width: calc(100% - 10px); /* Adjust width */
+      box-sizing: border-box; /* Include padding/border in width */
+    }
+    
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px dashed #eee;
+    }
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .cart-item-info {
+        text-align: right;
+        flex-grow: 1; /* Allow info section to take available space */
+        margin-left: 10px; /* Space between info and controls */
+    }
+    .cart-item-actions {
+        display: flex;
+        align-items: center;
+    }
+    .cart-item-actions span {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .cart-item-actions button {
+      margin-left: 5px;
+    }
+    /* Controls at the top/bottom of gallery */
+  .gallery-controls {
+      display: flex;
+    flex-wrap: wrap; /* اجازه می‌دهیم آیتم‌ها به خط بعدی شکسته شوند */
+    justify-content: center; /* آیتم‌ها را در مرکز قرار می‌دهد */
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #e0e7ff;
+    border-top: 1px solid #c3d4e6;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+    gap: 10px; /* فاصله بین آیتم‌های اصلی فلکس (wrapper و دکمه) */
+}
+  .group-selection-wrapper {
+      display: flex; /* این div خودش یک فلکس‌کانتینر می‌شود */
+      align-items: center;
+      gap: 5px; /* فاصله بین لیبل و سلکت دروپ‌داون */
+      margin-right: 10px; /* فاصله از دکمه "سبد خرید" (اگر در یک ردیف باشد) */
+  }
+    #gallery-bottom-controls {
+        margin-top: auto; /* Push to bottom of gallery content */
+        position: sticky; /* Make it sticky */
+        bottom: 0; /* Stick to the bottom */
+        left: 0;
+        right: 0;
+        border-bottom: none; /* No bottom border for the very bottom one */
+    }
+    #gallery-top-controls {
+        margin-bottom: 10px;
+        border-top: none; /* No top border for the very top one */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Shadow at the bottom */
+    }
+    .gallery-controls button {
+        margin: 0;
+    }
+    .in-cart-display {
+        font-size: 0.9em;
+        color: #007BFF; /* Blue color for in-cart message */
+        font-weight: bold;
+        margin-right: 0; /* Removed this as it's no longer next to select */
+    }
+    
+@media (max-width: 600px) {
+    .image-box {
+        width: calc(50% - 5px); /* Changed for two-column layout on mobile */
+    }
+   .gallery-controls {
+    display: flex; /* مطمئن شوید که flexbox فعال است */
+    flex-wrap: wrap; /* اجازه می‌دهد آیتم‌ها به سطر بعدی منتقل شوند */
+    gap: 10px; /* فاصله بین آیتم‌ها */
+    justify-content: space-around; /* یا center برای تراز وسط */
+    align-items: flex-start; /* یا stretch بسته به نیاز */
+}
+
+/* برای هر آیتم داخل gallery-controls */
+.gallery-controls > * {
+    flex: 1 1 calc(50% - 10px); /* برای دو آیتم در هر سطر با در نظر گرفتن gap */
+    max-width: calc(50% - 10px); /* اطمینان از عدم تجاوز از 50% */
+    box-sizing: border-box; /* برای جلوگیری از مشکلات پدینگ/بردر با عرض */
+}
+
+/* اگر در موبایل همچنان می‌خواهید ستونی باشند، می‌توانید یک Media Query اضافه کنید */
+@media (max-width: 768px) { /* مثال: برای صفحه‌های کوچکتر از 768 پیکسل */
+    .gallery-controls > * {
+        flex: 1 1 100%; /* یک آیتم در هر سطر */
+        max-width: 100%;
+    }
+}
+    .group-selection-wrapper {
+        width: calc(100% - 20px); /* در موبایل، wrapper هم تمام عرض شود */
+        justify-content: center; /* محتوای wrapper در موبایل وسط‌چین شود */
+        margin-right: 0; /* مارجین حذف شود */
+    }
+    .gallery-controls button {
+        width: calc(100% - 20px);
+    }
+    /* نیازی به تغییر .gallery-controls select نیست زیرا با min/max-width کنترل می‌شود */
+}
+  /* CSS برای مودال بزرگنمایی */
+  .modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+  </style>
+  
+</head>
+<body>
+
+<div id="mainSection">
+  <div class="main-title-container">
+    <img src="https://akbari5561.github.io/PosterIran/icons/apple-touch-icon-180x180.png" alt="Poster Iran Logo" class="header-logo"> <h1>پوستر ایران</h1>
+    <p id="subtitle">چاپ انواع پوسترهای آموزشی</p>
+  </div>
+  <div id="address">
+    <p>تهران : خیابان پانزده خرداد</p>
+    <p>بازار آهنگران ، کوچه مسجد جامع</p>
+    <p>پاساژ کاغذ و تحریر ، زیرزمین اول  پلاک۷۴</p>
+    <p> <a href="https://maps.google.com/?cid=1396884775989221050&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" style="text-decoration: none; color: #1976d2; font-weight: bold;">  (مشاهده در نقشه)</a></p>
+    <p>تلفـن : ۰۲۱۵۵۶۱۱۸۷۵</p>
+    <p>موبایل : ۰۹۰۱۰۱۹۵۸۸۵</p>
+  </div>
+  <div id="loginSection">
+    <button onclick="enterAsUser()">ورود به گالری</button>
+    <button onclick="showScreen('cart')">سبد خرید 🛒</button>
+  </div>
+  <div id="loginSection">
+    <button onclick="clearCart()" class="clear-cart-btn">پاک کردن سبد خرید</button>
+    <footer style="text-align: center; margin-top: 50px;">
+        <p>➡️ ابتدا سبد خرید مربوط به سفارش قبل را پاک کنید</p>
+    </footer>
+</div>
+</div>
+
+<div id="adminLogin">
+  <input type="password" id="adminPassword" placeholder="رمز ورود ادمین">
+  <button onclick="loginAsAdmin()">ورود ادمین</button>
+</div>
+
+<div id="gallery">
+  <div id="imagesContainer" class="image-container"></div>
+  <div id="gallery-bottom-controls" class="gallery-controls">
+  <div class="group-selection-wrapper"> <label for="bottomGroupSelect">انتخاب گروه :</label>
+    <select id="bottomGroupSelect" class="group-select-fixed" onchange="changeGroup(this.value)">
+      <option value="1">سایز ۲۹×۲۱ دوروچاپ</option>
+      <option value="2">سایز ۵۰×۳۵ یکروچاپ</option>
+      <option value="3">سایز ۵۰×۳۵ دوروچاپ</option>
+      <option value="4">سایز ۷۰×۵۰ یکروچاپ</option>
+      <option value="5">سایز ۷۰×۵۰ یووی‌دار</option>
+      <option value="6">سایر محصولات</option>
+    </select>
+  </div>
+  <button onclick="showScreen('cart')">سبد خرید 🛒</button>
+</div> </div>
+<div id="cartSection">
+  <h3>سبد خرید 🛒</h3>
+  <div id="cartList"></div>
+  <p id="totalPrice" style="font-weight: bold; font-size: 1.1em; margin-top: 15px;"></p>
+
+  <div class="customer-info-form" style="margin-top: 20px; text-align: right; background-color: #fffde7; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
+    <h4 style="margin-top: 0; margin-bottom: 15px; color: #333;">اطلاعات مشتری:</h4>
+    <label for="customerName" style="display: block; margin-bottom: 5px; font-weight: bold;">نام و نام خانوادگی:</label>
+    <input type="text" id="customerName" placeholder="نام و نام خانوادگی خود را وارد کنید" required style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+
+    <label for="customerPhone" style="display: block; margin-bottom: 5px; font-weight: bold;">شماره موبایل:</label>
+    <input type="tel" id="customerPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required pattern="09[0-9]{9}" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;" inputmode="numeric">
+
+    <label for="customerAddress" style="display: block; margin-bottom: 5px; font-weight: bold;">آدرس کامل تحویل:</label>
+    <textarea id="customerAddress" placeholder="آدرس دقیق، شامل استان، شهر، خیابان، کوچه، پلاک، واحد و کد پستی (اختیاری)" rows="4" required style="width: calc(100% - 20px); padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; resize: vertical;"></textarea>
+  </div>
+
+  <button onclick="prepareOrderForSending()" id="submitOrderBtn">ثبت و ارسال سفارش</button>
+  <button onclick="clearCart()" class="clear-cart-btn">پاک کردن کل سبد خرید</button>
+  <button onclick="showScreen('gallery')" style="background-color: #00acc1;">بازگشت به گالری</button>
+
+  <div id="sendOptions" style="display: none; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+    <button onclick="sendOrderWithWhatsApp()" style="background-color: #25D366;">ارسال سفارش با واتساپ 🟢</button>
+    <p style="font-weight: bold; margin-bottom: 20px; color: #1976d2;">سفارش‌شما‌با‌موفقیت‌آماده‌شد. لطفاً فیلترشکن را روشن و کلید ارسال سفارش با واتس‌آپ را انتخاب کنید.</p>
+    
+</div>
+
+</div>
+
+<div id="imageModal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
+  <span class="close-button" style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">×</span>
+  <img class="modal-content" id="modalImage" style="margin: auto; display: block; max-width: 90%; max-height: 90vh;">
+  <div id="caption" style="margin: auto; display: block; width: 80%; text-align: center; color: #ccc; padding: 10px 0; height: 150px;"></div>
+</div>
+
+<script>
+const groupInfo = {
+  1: {
+    name: "سایز ۲۹×۲۱ دوروچاپ",
+    count: 22, // تعداد فایل‌های این گروه
+    price: 100000,
+    // اضافه کردن لیست نام فایل‌های رندوم برای این گروه
+    filenames: ["الفبای فارسی و انگلیسی.jpg", "جدول تناوبی عناصر.jpg", /*"اعداد همراه با ساعت و محور.jpg"*/, /*"آموزش اعداد.jpg"*/, "آموزش زمان و ساعت.jpg", /*"آموزش زمان وساعت 2.jpg"*/, /*"آموزش ضرب و تقسیم.jpg"*/, "تمرین ضرب و تقسیم.jpg", "جدول دوستی تمرینی.jpg", "جدول دوستی کامل.jpg", "حساب آموز اول (افقی).jpg", /*"حساب آموز اول (عمودی).jpg"*/, "حساب آموز دوم (افقی).jpg", "حساب آموز دوم (عمودی).jpg", "حساب آموز پایه سوم.jpg", "ضرب و تمرین ضرب.jpg", "محیط و مساحت اشکال هندسی.jpg"]
+  },
+  2: {
+    name: "سایز ۵۰×۳۵ یکروچاپ",
+    count: 4, // تعداد فایل‌های این گروه
+    price: 100000,
+    // اضافه کردن لیست نام فایل‌های رندوم برای این گروه
+    filenames: ["الفبای فارسی و شکل صداها.jpg", "جدول دوستی.jpg", "جدول ضرب کد 350.jpg", "جدول ضرب کد 351.jpg"]
+  },
+  3: {
+    name: "سایز ۵۰×۳۵ دوروچاپ",
+    count: 9, // تعداد فایل‌های این گروه
+    price: 200000,
+    // اضافه کردن لیست نام فایل‌های رندوم برای این گروه
+    filenames: ["اعداد همراه ساعت و محور.jpg", "الفبای فارسی و انگلیسی.jpg", "آموزش ضرب و تقسیم.jpg", "تمرین ضرب و تقسیم.jpg", "جدول تناوبی عناصر.jpg", "جدول جمع و تفریق.jpg", "جدول دوستی تمرینی.jpg",/* "جدول دوستی کامل.jpg"*/, "آموزش زمان و ساعت.jpg"]
+  },
+  4: {
+    name: "سایز ۷۰×۵۰ یکروچاپ",
+    count: 12, // تعداد فایل‌های این گروه
+    price: 200000,
+    // اضافه کردن لیست نام فایل‌های رندوم برای این گروه
+    filenames: [/*الفبای فارسی"  شکل دار.jpg"*/, "الفبای فارسی بدون شکل.jpg", "اعداد 1 تا 100.jpg", "اعداد ده دهی.jpg", "اعداد یک تا ده.jpg", "الفبای انگلیسی.jpg", "جدول جمع.jpg", "جدول تفریق.jpg", "جدول ضرب.jpg", "جدول تقسیم.jpg", "جدول تناوبی عناصر.jpg", "جدول دوستی.jpg"]
+  },
+  5: {
+    name: "سایز ۷۰×۵۰ یووی‌دار",
+    count: 15, // تعداد فایل‌های این گروه
+    price: 250000,
+    // اضافه کردن لیست نام فایل‌های رندوم برای این گروه
+    filenames: ["شهرک الفبا.jpg", "جدول دوستی تمرینی.jpg", "آناتومی بدن انسان.jpg", "بدن من.jpg", /*"برنامه روزانه.jpg"*/, /*"برنامه هفتگی.jpg"*/, "شکل صداها و الفبای فارسی.jpg", "آموزش زمان وساعت.jpg", "ضرب تمرینی ستونی.jpg", "ضرب تمرینی مربعی.jpg", "محیط و مساحت اشکال هندسی.jpg", "منظومه خورشیدی.jpg", "نقشه ایران.jpg", "نقشه جهان.jpg"]
+  },
+  6: {
+    name: "سایر محصولات",
+        images: [
+            { filename: "فلش کارت ضرب.jpeg", name: "فلش کارت ضرب", price: 180000 },
+            { filename: "فلش کارت الفبا.jpeg", name: "فلش کارت الفبا", price: 180000 },
+            { filename: "دفترچه ای کوچک الفبا.jpeg", name: "دفترچه ای کوچک الفبا", price: 220000 },
+            { filename: "دفترچه ای کوچک دوستی.jpeg", name: "دفترچه ای کوچک دوستی", price: 220000 },
+            { filename: "دفترچه ای بزرگ ضرب.jpeg", name: "دفترچه ای بزرگ ضرب", price: 280000 },
+            { filename: "دفترچه ای بزرگ الفبا.jpeg", name: "دفترچه ای بزرگ الفبا", price: 280000 },
+            { filename: "دفترچه ای بزرگ دوستی.jpeg", name: "دفترچه ای بزرگ دوستی", price: 280000 },
+            { filename: "فلش کارت اعداد.jpeg", name: "فلش کارت اعداد", price: 240000, qtyMultiplier: 10 }, // محصول با مضرب 10
+        ],
+        type: "variable-count", // نوع جدید برای کنترل تعداد متغیر
+        defaultQtyMultiplier: 12 // مضرب پیش‌فرض برای این گروه
+    }
+};
+
+// Quantities must be sorted ascending
+// این آرایه دیگر به طور مستقیم برای dropdown سایر محصولات استفاده نمی‌شود
+const allowedQuantities = [0, 10, 20, 30, 50, 100, 200, 300, 400, 500];
+let cart = new Map(JSON.parse(localStorage.getItem('cart') || '[]'));
+
+// تعریف حداکثر تعداد مجاز برای "سایر محصولات"
+const MAX_QTY_OTHER_PRODUCTS = 1200;
+
+// --- Screen Management ---
+const screens = {
+    main: document.getElementById('mainSection'),
+    gallery: document.getElementById('gallery'),
+    cart: document.getElementById('cartSection')
+};
+
+function showScreen(screenName) {
+    // Hide all screens
+    for (let key in screens) {
+        screens[key].style.display = 'none';
+    }
+
+    // Show the requested screen
+    screens[screenName].style.display = 'flex'; // Use flex for these sections
+
+    // Update history for back button support
+    // Only push state if not going back via popstate or already on the screen
+    if (history.state === null || history.state.screen !== screenName) {
+        history.pushState({ screen: screenName }, '', `#${screenName}`);
+    }
+
+    // Specific actions for each screen
+    if (screenName === 'gallery') {
+        const currentGroupId = document.getElementById('bottomGroupSelect').value; // Get current selected group
+        loadGroup(currentGroupId); // Reload current group
+    } else if (screenName === 'cart') {
+        renderCartList();
+        loadCustomerInfo(); // <--- این خط را برای بارگذاری اطلاعات مشتری اضافه کنید
+        // Reset send options when entering cart section
+        document.getElementById('sendOptions').style.display = 'none';
+        document.getElementById('submitOrderBtn').style.display = 'block';
+    }
+}
+
+// Handle browser's back button
+window.addEventListener('popstate', (event) => {
+    if (imageModal.style.display === 'block') { // If image modal is open, close it first
+        closeImageModal(false); // Close without pushing new history state
+        // If there's a previous state for the image modal, pop it off again
+        if (event.state && event.state.modal === 'image') {
+            // Do nothing, just let the modal close.
+        } else {
+            // If the popstate was for a screen change and not the modal,
+            // we need to re-evaluate what screen to show.
+            // This happens if history.back() was used while modal was open,
+            // and the previous state was a screen.
+            const targetScreen = event.state ? event.state.screen : 'main';
+            showScreen(targetScreen);
+        }
+    } else if (event.state && event.state.screen) {
+        // Restore previous screen based on history state
+        for (let key in screens) {
+            screens[key].style.display = 'none';
+        }
+        screens[event.state.screen].style.display = 'flex';
+        if (event.state.screen === 'gallery') {
+            const currentGroupId = document.getElementById('bottomGroupSelect').value;
+            loadGroup(currentGroupId);
+        } else if (event.state.screen === 'cart') {
+            renderCartList();
+            loadCustomerInfo(); // <--- این خط را برای بارگذاری اطلاعات مشتری اضافه کنید
+            // Reset send options when going back to cart
+            document.getElementById('sendOptions').style.display = 'none';
+            document.getElementById('submitOrderBtn').style.display = 'block';
+        }
+    } else {
+        // Fallback to main screen if no state (e.g., initial load or direct URL)
+        showScreen('main');
+    }
+});
+
+
+function enterAsUser() {
+  showScreen('gallery');
+  // Sync selected group in both dropdowns
+  loadGroup(1); // Load the first group by default
+}
+
+function showAdminLogin() {
+  // Hide initial login button and address/subtitle
+  document.getElementById("loginSection").style.display = "none";
+  document.getElementById("subtitle").style.display = "none";
+  document.getElementById("address").style.display = "none";
+  // Show admin login form
+  document.getElementById("adminLogin").style.display = "flex";
+}
+
+function loginAsAdmin() {
+  const pass = document.getElementById("adminPassword").value;
+  if (pass === "Alireza55") {
+    alert("علیرضا خوش آمدید!");
+    // You might want to navigate to an admin panel or hide this form
+    // For now, it just shows an alert
+  } else {
+    alert("ورود شما مجاز نیست");
+  }
+}
+
+function changeGroup(val) {
+  // Sync both dropdowns when one changes
+  document.getElementById('bottomGroupSelect').value = val;
+  // Make sure to update the value of both dropdowns if there were two,
+  // but based on your HTML, only bottomGroupSelect is present for group selection.
+  // If you add a topGroupSelect, uncomment and adjust the line below:
+  // document.getElementById('topGroupSelect').value = val;
+  loadGroup(parseInt(val));
+}
+
+// تابع کمکی برای تولید گزینه‌ها برای dropdown تعداد
+function generateQuantityOptions(selectedQty, qtyMultiplier = 1, isOtherProductsGroup = false) { // پارامتر جدید isOtherProductsGroup
+    let optionsHtml = '';
+    const maxQtyForOtherProducts = MAX_QTY_OTHER_PRODUCTS; // استفاده از ثابت
+
+    if (isOtherProductsGroup) { // برای گروه "سایر محصولات"
+        optionsHtml += `<option value="0" ${selectedQty === 0 ? 'selected' : ''}>0</option>`;
+        // تولید گزینه تا 1200 با گام qtyMultiplier
+        for (let i = qtyMultiplier; i <= maxQtyForOtherProducts; i += qtyMultiplier) {
+            optionsHtml += `<option value="${i}" ${i === selectedQty ? 'selected' : ''}>${i}</option>`;
+        }
+    } else if (qtyMultiplier > 1) { // اگر qtyMultiplier بیشتر از 1 باشه (برای گروه‌های variable-count ولی نه گروه 6)
+        optionsHtml += `<option value="0" ${selectedQty === 0 ? 'selected' : ''}>0</option>`;
+        for (let i = qtyMultiplier; i <= 5000; i += qtyMultiplier) { // تا 5000 عدد تولید میشه، می‌تونید حداکثر رو تنظیم کنید
+            optionsHtml += `<option value="${i}" ${i === selectedQty ? 'selected' : ''}>${i}</option>`;
+        }
+    } else { // منطق قبلی برای allowedQuantities ثابت (گروه‌های معمولی)
+        allowedQuantities.forEach(qty => {
+            optionsHtml += `<option value="${qty}" ${qty === selectedQty ? 'selected' : ''}>${qty}</option>`;
+        });
+    }
+    return optionsHtml;
+}
+
+function loadGroup(groupId) {
+    const container = document.getElementById("imagesContainer");
+    container.innerHTML = ""; // پاک کردن تصاویر قبلی
+    const info = groupInfo[groupId]; // این 'info' آبجکت گروه فعلی شماست
+
+    // بررسی می‌کنیم که آیا این گروه از نوع 'variable-count' هست یا نه
+    const isVariableCountGroup = info.type === 'variable-count';
+    const isOtherProductsGroup = (groupId === 6); // تشخیص گروه "سایر محصولات"
+
+    // یک آرایه متحد برای محصولات ایجاد می‌کنیم تا حلقه forEach به صورت یکسان کار کنه
+    const itemsToRender = isVariableCountGroup ? info.images : info.filenames.map(f => ({
+        filename: f,
+        name: f.replace(/\.jpg$/, '').replace(/\.jpeg$/i, ''), // حذف پسوند jpg یا jpeg
+        price: info.price
+    }));
+
+    itemsToRender.forEach(item => {
+        const filename = item.filename;
+        const itemName = item.name;
+        const itemPrice = item.price;
+        
+        const imagePath = `Image/${info.name}/${filename}`; 
+
+        const itemUniqueId = `${groupId}-${filename}`;
+        const currentCartItem = cart.get(itemUniqueId);
+        // تعداد اولیه: اگر در سبد خرید بود، از تعداد اون استفاده میشه، در غیر این صورت 0.
+        const initialQty = currentCartItem ? currentCartItem.qty : 0; 
+
+        // مضرب برای این آیتم: اگر در گروه variable-count بود، از مضرب خاص محصول یا پیش‌فرض گروه استفاده می‌کنیم. در غیر این صورت 1.
+        const qtyMultiplier = isVariableCountGroup ? (item.qtyMultiplier || info.defaultQtyMultiplier || 1) : 1;
+
+        const box = document.createElement("div");
+        box.className = "image-box";
+        box.innerHTML = `
+            <img src="${imagePath}" alt="${itemName}" onclick="enlargeImage('${imagePath}', '${itemName}')">
+            <p style="font-weight: bold; margin-bottom: 5px;">${itemName}</p> 
+            <p style="color: #4CAF50; font-weight: bold;">قیمت: ${itemPrice.toLocaleString()} ریال</p>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px; justify-content: center;">
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <label for="qty-select-${itemUniqueId}">تعداد :</label>
+                    <select id="qty-select-${itemUniqueId}" class="quantity-select" onchange="addToCart('${groupId}', '${filename}')">
+                        ${generateQuantityOptions(initialQty, qtyMultiplier, isOtherProductsGroup)}
+                    </select>
+                </div>
+                <p id="in-cart-display-${itemUniqueId}" class="in-cart-display" style="margin-top: 5px;">موجود در سبد: ${initialQty} عدد</p>
+            </div>
+        `;
+        container.appendChild(box);
+    });
+
+    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function addToCart(groupId, filename) {
+    const info = groupInfo[groupId];
+    const itemUniqueId = `${groupId}-${filename}`;
+    
+    const isVariableCountGroup = info.type === 'variable-count'; // برای تشخیص نوع گروه (جهت دریافت مضرب)
+    const isOtherProductsGroup = (parseInt(groupId) === 6); // تشخیص گروه "سایر محصولات"
+
+    // همیشه از select مقدار را می‌خوانیم
+    const qtySelect = document.getElementById(`qty-select-${itemUniqueId}`);
+    let selectedQty = parseInt(qtySelect.value); // استفاده از let به جای const برای امکان تغییر
+
+    // مضرب صحیح برای این آیتم را پیدا می‌کنیم
+    let qtyMultiplier = 1; // پیش‌فرض 1 برای گروه‌های معمولی
+    if (isVariableCountGroup) {
+        const itemInGroup = info.images.find(img => img.filename === filename);
+        qtyMultiplier = itemInGroup ? (itemInGroup.qtyMultiplier || info.defaultQtyMultiplier) : info.defaultQtyMultiplier;
+    }
+
+    // اعتبارسنجی کلی برای مقدار ورودی
+    if (isNaN(selectedQty) || selectedQty < 0) {
+        alert("لطفا تعداد معتبری را انتخاب کنید.");
+        selectedQty = cart.has(itemUniqueId) ? cart.get(itemUniqueId).qty : 0; // بازگشت به مقدار قبلی
+        qtySelect.value = selectedQty;
+        return;
+    }
+    
+    // اعتبارسنجی مضرب (فقط برای گروه‌های variable-count)
+    if (isVariableCountGroup && (selectedQty % qtyMultiplier !== 0)) {
+        alert(`برای این محصول، تعداد باید مضربی از ${qtyMultiplier} باشد.`);
+        // اگر مضرب رعایت نشده بود، dropdown را به مقدار قبلی یا 0 (برای حذف) برمی‌گردانیم
+        qtySelect.value = cart.has(itemUniqueId) ? cart.get(itemUniqueId).qty : 0; 
+        return;
+    }
+
+    // اعتبارسنجی محدودیت 1200 فقط برای گروه "سایر محصولات"
+    if (isOtherProductsGroup && selectedQty > MAX_QTY_OTHER_PRODUCTS) { 
+        alert(`حداکثر تعداد مجاز برای محصولات گروه "سایر محصولات" ${MAX_QTY_OTHER_PRODUCTS} عدد است.`);
+        selectedQty = MAX_QTY_OTHER_PRODUCTS; // محدود کردن به 1200
+        qtySelect.value = selectedQty; // بروزرسانی dropdown
+    }
+
+    // پیدا کردن اطلاعات کامل محصول برای اضافه کردن به سبد
+    const itemToAdd = isVariableCountGroup ? info.images.find(img => img.filename === filename) : {
+        filename: filename,
+        name: filename.replace(/\.jpg$/, '').replace(/\.jpeg$/i, ''),
+        price: info.price
+    };
+
+    if (selectedQty === 0) { // اگر 0 انتخاب شد، یعنی حذف از سبد
+        if (cart.has(itemUniqueId)) {
+            removeFromCart(itemUniqueId, false); // false = don't show confirmation
+        }
+    } else {
+        cart.set(itemUniqueId, {
+            groupId: groupId,
+            filename: filename,
+            groupName: info.name,
+            name: itemToAdd.name,
+            price: itemToAdd.price,
+            qty: selectedQty
+        });
+    }
+    
+    saveCart();
+    
+    // به‌روزرسانی نمایش "موجود در سبد" در صفحه گالری برای آیتم خاص
+    let inCartDisplayElement = document.getElementById(`in-cart-display-${itemUniqueId}`);
+
+    if (inCartDisplayElement) {
+        inCartDisplayElement.textContent = `موجود در سبد: ${selectedQty} عدد`;
+    }
+}
+
+function updateCartItemQuantityFromDropdown(selectElement, itemUniqueId) {
+    let newQty = parseInt(selectElement.value);
+    const [groupId, filename] = itemUniqueId.split('-'); // استخراج groupId
+    const isOtherProductsGroup = (parseInt(groupId) === 6); // بررسی اگر گروه 6 است
+
+    if (isNaN(newQty) || newQty < 0) {
+        console.error("Invalid quantity selected from dropdown.");
+        renderCartList();
+        return;
+    }
+
+    // اعمال محدودیت 1200 فقط برای گروه "سایر محصولات"
+    if (isOtherProductsGroup && newQty > MAX_QTY_OTHER_PRODUCTS) {
+        alert(`حداکثر تعداد مجاز برای محصولات گروه "سایر محصولات" ${MAX_QTY_OTHER_PRODUCTS} عدد است.`);
+        newQty = MAX_QTY_OTHER_PRODUCTS; // محدود کردن به 1200
+        selectElement.value = newQty; // بروزرسانی مقدار dropdown
+    }
+    
+    if (newQty === 0) {
+        removeFromCart(itemUniqueId);
+    } else {
+        let item = cart.get(itemUniqueId);
+        item.qty = newQty;
+        cart.set(itemUniqueId, item);
+        saveCart();
+        renderCartList();
+    }
+}
+
+function removeFromCart(itemUniqueId, showConfirm = true) {
+    if (showConfirm && !confirm('آیا مطمئنید می‌خواهید این محصول را از سبد حذف کنید؟')) {
+        return;
+    }
+    cart.delete(itemUniqueId);
+    saveCart();
+    renderCartList();
+
+    if (document.getElementById('gallery').style.display === 'flex') {
+        const qtySelectInGallery = document.getElementById(`qty-select-${itemUniqueId}`);
+        if (qtySelectInGallery) {
+            qtySelectInGallery.value = 0;
+            const inCartDisplayElement = document.getElementById(`in-cart-display-${itemUniqueId}`);
+            if (inCartDisplayElement) {
+                inCartDisplayElement.textContent = `موجود در سبد: 0 عدد`;
+            }
+        }
+    }
+}
+
+function clearCart() {
+    if (confirm('آیا مطمئنید می‌خواهید کل سبد خرید را پاک کنید؟')) {
+        cart.clear();
+        saveCart();
+        renderCartList();
+        alert('سبد خرید شما پاک شد.');
+        if (document.getElementById('gallery').style.display === 'flex') {
+            loadGroup(document.getElementById('bottomGroupSelect').value);
+        }
+    }
+}
+
+// تابع جدید برای محاسبه درصد تخفیف بر اساس مبلغ کل
+function calculateDiscountPercentage(totalAmount) {
+    if (totalAmount >= 1000000000) {
+        return 0.10; // 10%
+    } else if (totalAmount >= 900000000) {
+    return 0.09; // 9%
+    } else if (totalAmount >= 800000000) {
+        return 0.08; // 8%
+    } else if (totalAmount >= 700000000) {
+    return 0.07; // 7%
+    } else if (totalAmount >= 600000000) {
+        return 0.06; // 6%
+    } else if (totalAmount >= 500000000) {
+        return 0.05; // 5%
+    } else if (totalAmount >= 400000000) {
+        return 0.04; // 4%
+    } else if (totalAmount >= 300000000) {
+        return 0.03; // 3%
+    } else if (totalAmount >= 100000000) {
+        return 0.02; // 2%
+    } else {
+        return 0; // No discount
+    }
+}
+
+
+
+function renderCartList() {
+    const list = document.getElementById("cartList");
+    const totalDisplay = document.getElementById("totalPrice"); // Changed variable name to avoid conflict
+    list.innerHTML = "";
+    let grouped = {};
+    let groupedSummaries = {};
+    let totalSumBeforeDiscount = 0; // Initial total before any discount
+
+    if (cart.size === 0) {
+        list.innerHTML = "<p>سبد خرید شما خالی است.</p>";
+        totalDisplay.textContent = `مبلغ کل: 0 ریال`;
+        return;
+    }
+
+    cart.forEach(item => {
+        if (!grouped[item.groupName]) grouped[item.groupName] = [];
+        grouped[item.groupName].push(item);
+        totalSumBeforeDiscount += item.qty * item.price; // Calculate total before discount
+
+        if (!groupedSummaries[item.groupName]) {
+            groupedSummaries[item.groupName] = {
+                totalQty: 0,
+                totalPrice: 0
+            };
+        }
+        groupedSummaries[item.groupName].totalQty += item.qty;
+        groupedSummaries[item.groupName].totalPrice += item.qty * item.price;
+    });
+
+    for (let groupName in grouped) {
+        list.innerHTML += `<h4 style="margin-top: 15px; text-align: right; border-bottom: 1px dashed #eee; padding-bottom: 5px;">${groupName}</h4>`;
+        grouped[groupName].forEach(item => {
+            const itemUniqueId = `${item.groupId}-${item.filename}`;
+            
+            const group = groupInfo[item.groupId]; 
+            let itemDetail = null;
+            if (group.type === 'variable-count') {
+                itemDetail = group.images.find(img => img.filename === item.filename);
+            }
+            const qtyMultiplierForCartItem = itemDetail ? (itemDetail.qtyMultiplier || group.defaultQtyMultiplier || 1) : 1; 
+            const isOtherProductsGroup = (parseInt(item.groupId) === 6); // تشخیص گروه 6 در سبد خرید
+
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "cart-item";
+            itemDiv.innerHTML = `
+                <div class="cart-item-info">
+                    <p style="font-weight: bold; margin-bottom: 3px;"> ${item.filename.replace(/\.(jpeg|jpg)$/i, '')}</p>
+                </div>
+                <div class="quantity-control">
+                    <select id="cart-qty-select-${itemUniqueId}" class="quantity-select"
+                                onchange="updateCartItemQuantityFromDropdown(this, '${itemUniqueId}')">
+                            ${generateQuantityOptions(item.qty, qtyMultiplierForCartItem, isOtherProductsGroup)} </select>
+                    <button class="remove-btn" onclick="removeFromCart('${itemUniqueId}')">حذف</button>
+                </div>
+            `;
+            list.appendChild(itemDiv);
+        });
+    }
+
+    list.innerHTML += `<hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">`;
+    list.innerHTML += `<h3 style="margin-bottom: 10px;">خلاصه سفارش بر اساس گروه:</h3>`;
+    for (let groupName in groupedSummaries) {
+        const summary = groupedSummaries[groupName];
+        list.innerHTML += `
+            <div style="background-color: #e8f5e9; padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right;">
+                <p style="font-weight: bold; margin: 0;">${groupName}:</p>
+                <p style="margin: 0; font-size: 0.9em;">تعداد کل: ${summary.totalQty} عدد - مجموع قیمت: ${summary.totalPrice.toLocaleString()} ریال</p>
+            </div>
+        `;
+    }
+    list.innerHTML += `<hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">`;
+
+// ADDED: Display total before discount here
+list.innerHTML += `
+        <div style="padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right; background-color: #e0f2f7;">
+            <p style="font-weight: bold; margin: 0;">مبلغ کل (پیش از تخفیف و باربری): ${totalSumBeforeDiscount.toLocaleString()} ریال</p>
+        </div>
+    `;
+
+// --- Discount Calculation ---
+const discountRate = calculateDiscountPercentage(totalSumBeforeDiscount);
+const discountAmount = totalSumBeforeDiscount * discountRate;
+let totalSumAfterDiscount = totalSumBeforeDiscount - discountAmount;
+
+if (discountAmount > 0) {
+    list.innerHTML += `
+            <div style="padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right; background-color: #ffe0b2;">
+                <p style="font-weight: bold; margin: 0; color: #e65100;">🎁 تخفیف (${discountAmount.toLocaleString()} ریال)</p>
+                <p style="margin: 0; font-size: 0.9em;">مبلغ پس از تخفیف: ${totalSumAfterDiscount.toLocaleString()} ریال</p>
+            </div>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">
+        `;
+}
+
+
+    const baseShippingThreshold = 100000000; 
+    const costPerThreshold = 600000;     
+    let calculatedShippingCost = 0;
+    let shippingDisplayMessage = "";
+    
+    // Shipping calculation based on totalSumAfterDiscount
+    if (totalSumAfterDiscount === 0) {
+        calculatedShippingCost = 0;
+        
+        shippingDisplayMessage = `\n🚚 هزینه باربری: 0 ریال`;
+    } else {
+        const numberOfThresholds = Math.ceil(totalSumAfterDiscount / baseShippingThreshold);
+        calculatedShippingCost = numberOfThresholds * costPerThreshold;
+        shippingDisplayMessage = `\n🚚 هزینه‌باربری‌(‌${numberOfThresholds} بسته) : ${calculatedShippingCost.toLocaleString()} ریال `;
+    }
+
+    list.innerHTML += `
+        <div style="padding: 8px; margin-top: 10px; border-radius: 5px; text-align: right;">
+            <p style="font-weight: bold; margin: 0;">${shippingDisplayMessage}</p>
+        </div>
+    `;
+    const finalTotalWithShipping = totalSumAfterDiscount + calculatedShippingCost; // Final total includes discount and shipping
+    totalDisplay.textContent = `💰 مبلغ کل سفارش: ${finalTotalWithShipping.toLocaleString()} ریال`;
+}
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(Array.from(cart.entries())));
+}
+
+// Global variables to store generated message and phone number
+let orderMessageContent = "";
+const orderPhoneNumber = "989010195885"; // شماره تماس با پیش‌شماره ایران
+
+function prepareOrderForSending() {
+  if (cart.size === 0) {
+    alert('سبد خرید شما خالی است.');
+    return;
+  }
+
+  const customerName = document.getElementById('customerName').value.trim();
+  const customerPhone = document.getElementById('customerPhone').value.trim();
+  const customerAddress = document.getElementById('customerAddress').value.trim();
+
+  if (!customerName || !customerPhone || !customerAddress) {
+    alert('لطفاً نام و نام خانوادگی، شماره موبایل و آدرس کامل تحویل را وارد کنید.');
+    return;
+  }
+
+  localStorage.setItem('customerName', customerName);
+  localStorage.setItem('customerPhone', customerPhone);
+  localStorage.setItem('customerAddress', customerAddress);
+
+  const confirmation = confirm('آیا از ثبت و ارسال سفارش خود مطمئن هستید؟');
+  if (!confirmation) {
+    alert('ثبت سفارش لغو شد.');
+    return;
+  }
+
+  // --- Generate the message content ---
+  let
+  message = "🛍️ سفارش من :  \n"
+  message += `\n👤 نام و نام خانوادگی: ${customerName}\n`;
+  message += `📱 شماره موبایل: ${customerPhone}\n`;
+  message += `📍 آدرس تحویل: ${customerAddress}\n`;
+
+  let totalAmountBeforeDiscount = 0; // Renamed for clarity
+  let groupedItems = {};
+  let groupedSummaries = {};
+
+  cart.forEach(item => {
+    if (!groupedItems[item.groupName]) groupedItems[item.groupName] = [];
+    groupedItems[item.groupName].push(item);
+    totalAmountBeforeDiscount += item.qty * item.price; // Use new variable
+    if (!groupedSummaries[item.groupName]) {
+      groupedSummaries[item.groupName] = { totalQty: 0, totalPrice: 0 };
+    }
+    groupedSummaries[item.groupName].totalQty += item.qty;
+    groupedSummaries[item.groupName].totalPrice += item.qty * item.price;
+  });
+  message += "\n🔆🔅 جزئیات  سفارش\n";
+  for (let groupName in groupedItems) {
+    message += `\n• ${groupName}  :\n`;
+    groupedItems[groupName].forEach(item => {
+      message += `  - ${item.filename.replace(/\.(jpeg|jpg)$/i, '')} - تعداد: ${item.qty} عدد\n`;
+    });
+  }
+  message += "               ---------------------------------------\n";
+  message += "\n🔶🔸 خلاصه سفارش بر اساس گروه\n";
+  for (let groupName in groupedSummaries) {
+    const summary = groupedSummaries[groupName];
+    message += `* ${groupName}: تعداد کل ${summary.totalQty} عدد - مجموع قیمت: ${summary.totalPrice.toLocaleString()} ریال\n`;
+  }
+  message += "               ---------------------------------------\n";
+
+  // --- Discount Calculation for Message ---
+  const discountRate = calculateDiscountPercentage(totalAmountBeforeDiscount);
+  const discountAmount = totalAmountBeforeDiscount * discountRate;
+  const totalAmountAfterDiscount = totalAmountBeforeDiscount - discountAmount;
+
+  message += `\n💵 مبلغ کل (پیش از تخفیف و باربری): ${totalAmountBeforeDiscount.toLocaleString()} ریال`;
+  if (discountAmount > 0) {
+      message += `\n🎁 تخفیف : ${discountAmount.toLocaleString()} ریال`;
+      message += `\n💵 مبلغ پس از تخفیف: ${totalAmountAfterDiscount.toLocaleString()} ریال`;
+  }
+
+
+  const baseShippingThreshold = 100000000;
+  const costPerThreshold = 600000;
+  let calculatedShippingCost = 0;
+  let shippingMessage = "";
+  
+  // Shipping calculation based on totalAmountAfterDiscount
+  if (totalAmountAfterDiscount === 0) {
+    calculatedShippingCost = 0;
+    shippingMessage = "\n🚚 هزینه باربری: 0 ریال";
+  } else {
+    const numberOfThresholds = Math.ceil(totalAmountAfterDiscount / baseShippingThreshold);
+    calculatedShippingCost = numberOfThresholds * costPerThreshold;
+    shippingMessage = `\n🚚 هزینه‌باربری‌(‌${numberOfThresholds} بسته) : ${calculatedShippingCost.toLocaleString()} ریال `;
+  }
+
+  const finalTotalAmountWithShipping = totalAmountAfterDiscount + calculatedShippingCost; // Final total after discount and shipping
+
+  message += shippingMessage;
+  message += `\n💰 مبلغ نهایی قابل پرداخت: ${finalTotalAmountWithShipping.toLocaleString()} ریال`; // Updated final total message
+  message += `\n\n✅  سفارش شما با موفقیت ثبت شد . در اسرع وقت سفارش شما بررسی و هماهنگی لازم با شما صورت می‌گیرد.`;
+
+  // Store the message globally
+  orderMessageContent = message;
+
+  // Show the sending options and hide the original submit button
+  document.getElementById('sendOptions').style.display = 'block';
+  document.getElementById('submitOrderBtn').style.display = 'none';
+  alert('لطفاً فیلترشکن را روشن و کلید ارسال با واتس‌آپ را انتخاب کنید.');
+}
+
+function sendOrderWithWhatsApp() {
+    if (!orderMessageContent) {
+        alert("لطفاً ابتدا سفارش را با کلیک بر روی 'ثبت و ارسال سفارش' آماده کنید.");
+        return;
+    }
+    const whatsappUrl = `https://wa.me/${orderPhoneNumber}?text=${encodeURIComponent(orderMessageContent)}`;
+    window.open(whatsappUrl, '_blank');
+    resetSendOptions(); // Hide options after sending
+}
+
+function resetSendOptions() {
+    document.getElementById('sendOptions').style.display = 'none';
+    document.getElementById('submitOrderBtn').style.display = 'block';
+    orderMessageContent = ""; // Clear message content after sending
+}
+
+// توابع بزرگنمایی تصویر
+const imageModal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const captionText = document.getElementById('caption');
+const closeButton = document.getElementsByClassName('close-button')[0];
+
+function enlargeImage(src, alt) {
+  imageModal.style.display = 'block';
+  modalImage.src = src;
+  captionText.innerHTML = alt;
+  // برای جلوگیری از اسکرول شدن بدنه اصلی در حالت نمایش مودال
+  document.body.style.overflow = 'hidden';
+  // Push a new state to history when the modal opens
+  history.pushState({ modal: 'image' }, 'Image Enlarge', '#image-enlarged');
+}
+
+function closeImageModal(popHistory = true) {
+  imageModal.style.display = 'none';
+  document.body.style.overflow = 'auto'; // بازگرداندن اسکرول بدنه
+  if (popHistory) {
+      // Go back in history if this close was not triggered by a popstate
+      // This ensures the back button doesn't get "stuck" on the modal state
+      if (history.state && history.state.modal === 'image') {
+          history.back();
+      }
+  }
+}
+
+// بستن مودال با دکمه بستن
+closeButton.onclick = function() {
+  closeImageModal(true); // Call with true to pop history state
+}
+
+// بستن مودال با کلیک در هر جای خارج از تصویر
+imageModal.onclick = function(event) {
+  if (event.target === imageModal) {
+    closeImageModal(true); // Call with true to pop history state
+  }
+}
+
+// این قسمت را برای بارگذاری اطلاعات مشتری هنگام بارگذاری صفحه یا نمایش سبد خرید اضافه کنید
+function loadCustomerInfo() {
+    const customerName = localStorage.getItem('customerName');
+    const customerPhone = localStorage.getItem('customerPhone');
+    const customerAddress = localStorage.getItem('customerAddress');
+    
+    if (customerName) {
+        document.getElementById('customerName').value = customerName;
+    }
+    if (customerPhone) {
+        document.getElementById('customerPhone').value = customerPhone;
+    }
+    if (customerAddress) {
+        document.getElementById('customerAddress').value = customerAddress;
+    }
+}
+
+// window.onload را برای بارگذاری اطلاعات مشتری تغییر دهید
+window.onload = function() {
+    // Check if there's a specific screen in the URL hash, otherwise show 'main'
+    const initialHash = window.location.hash.substring(1); // Remove '#'
+    if (initialHash && screens[initialHash]) {
+        showScreen(initialHash);
+    } else {
+        showScreen('main');
+    }
+    history.replaceState({ screen: initialHash || 'main' }, '', `#${initialHash || 'main'}`);
+    renderCartList();
+    loadCustomerInfo(); // <--- این خط را برای بارگذاری اولیه اضافه کنید
+};
+
+</script>
+</div>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js?v=6.9').then(function(registration) { /* اینجا ورژن را به روز کنید */
+                console.log('✅ Service Worker ثبت شد: ', registration.scope);
+            }).catch(function(error) {
+                console.log('❌ ثبت Service Worker شکست خورد:', error);
+            });
+        });
+    }
+</script>
+
+<footer style="text-align: center; margin-top: 50px;">
+    <p>All rights reserved for Poster Iran © 2025</p>
+</footer>
+</body>
+</html>
