@@ -1,4 +1,4 @@
-const CACHE_NAME = 'iran-poster-shop-v1';
+const CACHE_NAME = 'iran-poster-shop-v1.9';
 const urlsToCache = [
   '/',
   '/index.html',
