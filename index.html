@@ -1,1102 +1,1906 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منظومه‌خورشیدی</title>
+  <meta charset="UTF-8">
+  <title>پوستر ایران</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" href="/icons/favicon.ico?v=1.0" type="image/x-icon">
+  <link rel="shortcut icon" href="/icons/favicon.ico?v=1.0" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167x167.png?v=1.0">
+  <link rel="manifest" href="/icons/manifest.json?v=1.0">
+  <meta name="theme-color" content="#714A9C">
+  <meta property="og:title" content="پوستر ایران">
+  <meta property="og:description" content="چاپ انواع پوسترهای آموزشی">
+  <meta property="og:image" content="/icons/og-image.jpg?v=1.0">
+  <meta property="og:url" content="https://akbari5561.github.io/PosterIran/">
+
+  <link rel="preload" as="image" href="https://akbari5561.github.io/PosterIran/icons/apple-touch-icon-180x180.png">
+  
+  <style>
+  
+/* Import Vazirmatn font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Vazirmatn', sans-serif; /* Apply Vazirmatn font */
+      direction: r#6D0B9Dtl;
+      background: #43399E; /* Softer background#543AFB */
+      color: #333;
+      padding: 0; /* Remove default body padding */
+      margin: 0; /* Remove default body margin */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure body takes full viewport height */
+      align-items: center; /* Center content horizontally */
+      justify-content: center; /* Center content vertically */
+      position: relative; /* Add this to position particles relative to body */
+    }
+
+    /* Particles.js container styling */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #382E92; /* Dark blue background color for the particles */
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      z-index: -1; /* Layer 1: Bottommost layer for background */
+    }
+    /* Animation Keyframes - جهت اسکرول از چپ به راست تغییر داده شد */
+    @keyframes scroll {
+      0% { transform: translateX(-100%); } /* شروع از سمت چپ خارج از صفحه */
+      999% { transform: translateX(100%); } /* پایان در سمت راست خارج از صفحه */
+    }
+
+    /* Style for the scrolling text container */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden; /* پنهان کردن متن خارج از کانتینر */
+      white-space: nowrap; /* جلوگیری از شکستن خط متن */
+      box-sizing: border-box;
+      padding: 0px 0;
+      margin-top: 0px;
+      margin-bottom: -30px;
+      background-color: #F2F2F2; /* رنگ زرد برای برجسته شدن */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 1; /* اطمینان از قرارگیری در بالای ذرات پس‌زمینه */
+      direction: ltr; /* جهت حرکت باید چپ به راست باشد تا متن روان حرکت کند */
+    }
+
+    /* Style for the scrolling text itself */
+    .scrolling-text {
+      display: inline-block;
+      color: #043BC88F;
+      font-size: 1.1em;
+      font-weight: bold;
+      /* اعمال انیمیشن: اسم، مدت زمان، سرعت، تکرار */
+      animation: scroll 80s linear infinite; 
+      padding-left: 100%; /* اضافه کردن پدینگ از چپ برای شروع درست حرکت */
+    }
+
+    /* *************************************** */
+    /* ** پایان استایل‌های متن متحرک ** */
+    /* *************************************** */
+    /* Enhanced Hero Section for the main page */
+    #mainSection {
+        margin-top: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 900px; /* Max width for content */
+        padding: 40px 20px; /* More padding */
+        box-sizing: border-box;
+        background: #067FB500; /* Semi-transparent blue background */
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* More prominent shadow */
+        text-align: center;
+        position: relative;
+        z-index: 1; /* Layer 2: Main content */
+    }
     
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        :root {
-            --mercury-orbit-size: 20vw;
-            --venus-orbit-size: 27vw;
-            --earth-orbit-size: 35vw;
-            --mars-orbit-size: 45vw;
-            --jupiter-orbit-size: 65vw; 
-            --saturn-orbit-size: 75vw; 
-            --uranus-orbit-size: 85vw; 
-            --neptune-orbit-size: 95vw; 
-            /* متغیر جدید برای کمربند کویپر */
-            --kuiper-belt-size: 135vw;
-            --mercury-size: 1vw;
-            --venus-size: 1.2vw;
-            --earth-size: 1.5vw;
-            --mars-size: 1.2vw;
-            --jupiter-size: 3vw;
-            --saturn-size: 2.5vw;
-            --uranus-size: 2vw;
-            --neptune-size: 1.8vw;
-
-            --mercury-speed: 8.8s;
-            --venus-speed: 22.5s;
-            --earth-speed: 36.5s;
-            --mars-speed: 68.7s;
-            --jupiter-speed: 43.3s;
-            --saturn-speed: 107.6s;
-            --uranus-speed: 306.9s;
-            --neptune-speed: 601.9s;
-            /* متغیر جدید برای سرعت کمربند کویپر (بسیار کندتر) */
-            --kuiper-speed: 80s; 
-        }
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            overflow-y: hidden; /* یا auto اگر بخواهید اسکرول عمودی باشد */
-        }
+    .main-title-container {
+        margin-bottom: -10px;
+        padding: 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Stack logo, h1, h2 */
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
         
-        body {
-            background-color: #0d0d1a;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 8vw;
-            margin-bottom: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-        }
+    .header-logo {
+        max-width: 180px; /* Adjusted size for the new layout */
+        height: auto;
+        margin-bottom: -1px; /* Space between logo and title */
+    }
 
-        .subtitle {
-            text-align: center;
-            font-size: 6vw;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            opacity: 0.7;
-        }
-
-        .solar-system {
-            position: relative;
-            transform-origin: center center;
-            width: 100vw;
-            height: 100vh;
-            flex-grow: 1;
-        }
-
-        .sun {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 10vw;
-            height: 10vw;
-            background: radial-gradient(circle at 30% 30%, #fff, #ffcc00, #ff9900);
-            border-radius: 50%;
-            box-shadow: 0 0 4vw 2vw rgba(255, 204, 0, 0.7);
-            z-index: 10;
-        }
-
-        .orbit {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            border: 0.1vw solid rgba(255, 255, 255, 0.4); 
-            animation: orbit-animation linear infinite;
-        }
-
-        .planet {
-            position: absolute;
-            border-radius: 50%;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
-        }
-
-        .mercury-orbit { width: var(--mercury-orbit-size); height: var(--mercury-orbit-size); animation-duration: var(--mercury-speed); }
-        .mercury { width: var(--mercury-size); height: var(--mercury-size); background-color: #a0a0a0; }
-
-        .venus-orbit { width: var(--venus-orbit-size); height: var(--venus-orbit-size); animation-duration: var(--venus-speed); }
-        .venus { width: var(--venus-size); height: var(--venus-size); background-color: #e0c060; }
-
-        .earth-orbit { width: var(--earth-orbit-size); height: var(--earth-orbit-size); animation-duration: var(--earth-speed); }
-        .earth { width: var(--earth-size); height: var(--earth-size); background-color: #007bff; }
-
-        .mars-orbit { width: var(--mars-orbit-size); height: var(--mars-orbit-size); animation-duration: var(--mars-speed); }
-        .mars { width: var(--mars-size); height: var(--mars-size); background-color: #e45831; }
-
-        .asteroid-belt {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(0deg); 
-            width: 55vw; 
-            height: 55vw; 
-            border-radius: 50%;
-            z-index: 1;
-
-            /* استفاده از border برای ایجاد نوار کمربند */
-            border: 33vw solid transparent; /* یک نوار شفاف برای کمربند */
-
-            /* پس‌زمینه برای نمایش سیارک‌ها */
-            background: 
-                radial-gradient(circle at 11% 16%, rgba(180, 180, 180, 0.5) 0.15vw, transparent 0.2vw),
-                radial-gradient(circle at 26% 15%, rgba(202, 184, 184, 0.53) 0.1vw, transparent 0.31vw),
-                radial-gradient(circle at 46% 6%, rgba(200, 200, 200, 0.69) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 5% 50%, rgba(191, 186, 186, 0.46) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 5% 56%, rgba(191, 186, 186, 0.46) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 21% 81%, rgba(180, 180, 180, 0.5) 0.22vw, transparent 0.27vw),
-                radial-gradient(circle at 9% 34%, rgba(144, 135, 135, 0.63) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 64% 15%, rgba(180, 180, 180, 0.5) 0.17vw, transparent 0.15vw),
-                radial-gradient(circle at 12% 49%, rgba(125, 101, 101, 0.71) 0.2vw, transparent 0.75vw),
-                radial-gradient(circle at 5% 61%, rgba(115, 108, 109, 0.47) 0.31vw, transparent 0.52vw),
-                radial-gradient(circle at 35% 15%, rgba(180, 180, 180, 0.5) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 36% 10%, rgba(180, 180, 180, 0.5) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 9% 39%, rgba(144, 138, 138, 0.43) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 20% 75%, rgba(181, 168, 171, 0.52) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 65%, rgba(149, 145, 146, 0.45) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 70%, rgba(170, 163, 164, 0.53) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 90% 29%, rgba(200, 200, 200, 0.4) 0.19vw, transparent 0.24vw),
-                radial-gradient(circle at 80% 29%, rgba(200, 200, 200, 0.4) 0.19vw, transparent 0.24vw),
-                radial-gradient(circle at 15% 40%, rgba(167, 153, 153, 0.39) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 10% 40%, rgba(147, 142, 142, 0.54) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 85% 70%, rgba(147, 142, 142, 0.54) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 80% 70%, rgba(147, 142, 142, 0.54) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 85% 70%, rgba(146, 140, 130, 0.87) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 48% 10%, rgba(200, 200, 200, 0.4) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 10% 70%, rgba(145, 140, 140, 0.87) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 55% 95%, rgba(200, 200, 200, 0.4) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 16%, rgba(117, 109, 109, 0.47) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 13%, rgba(98, 98, 102, 0.6) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 8%, rgba(129, 125, 125, 0.54) 0.13vw, transparent 0.78vw),
-                radial-gradient(circle at 62% 92%, rgba(133, 117, 117, 1) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 60% 90%, rgba(133, 117, 117, 0.54) 0.21vw, transparent 0.6vw),
-                radial-gradient(circle at 90% 60%, rgba(185, 181, 181, 0.46) 0.21vw, transparent 0.42vw),
-                radial-gradient(circle at 75% 20%, rgba(130, 112, 112, 0.52) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 55% 88%, rgba(147, 138, 138, 0.48) 0.18vw, transparent 0.4vw),
-                radial-gradient(circle at 30% 0%, rgba(180, 180, 180, 0.5) 0.1vw, transparent 0.4vw),
-                radial-gradient(circle at 50% 10%, rgba(200, 200, 200, 0.4) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 70% 10%, rgba(172, 166, 166, 0.51) 0.15vw, transparent 0.2vw),
-                radial-gradient(circle at 56% 5%, rgba(180, 180, 180, 0.4) 0.18vw, transparent 0.22vw),
-                radial-gradient(circle at 5% 55%, rgba(191, 186, 186, 0.46) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 5% 58%, rgba(191, 186, 186, 0.46) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 25% 85%, rgba(180, 180, 180, 0.5) 0.22vw, transparent 0.47vw),
-                radial-gradient(circle at 13% 35%, rgba(180, 180, 180, 0.5) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 60% 5%, rgba(180, 180, 180, 0.5) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 13% 45%, rgba(180, 180, 180, 0.5) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 5% 95%, rgba(200, 200, 200, 0.4) 0.17vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 15%, rgba(180, 180, 180, 0.5) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 16% 70%, rgba(180, 180, 180, 0.5) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 40% 15%, rgba(200, 200, 200, 0.4) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 20% 75%, rgba(181, 168, 171, 0.52) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 65%, rgba(149, 145, 146, 0.45) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 70%, rgba(170, 163, 164, 0.53) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 90% 25%, rgba(200, 200, 200, 0.4) 0.39vw, transparent 0.24vw),
-                radial-gradient(circle at 15% 40%, rgba(167, 153, 153, 0.39) 0.26vw, transparent 0.21vw),
-                radial-gradient(circle at 10% 40%, rgba(147, 142, 142, 0.54) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 85% 70%, rgba(147, 142, 142, 0.54) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 80% 70%, rgba(147, 142, 142, 0.54) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 85% 80%, rgba(146, 140, 140, 0.87) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 8% 60%, rgba(200, 200, 200, 0.4) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 20% 70%, rgba(145, 140, 140, 0.87) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 55% 95%, rgba(118, 109, 109, 0.4) 0.31vw, transparent 0.22vw),
-                radial-gradient(circle at 50% 90%, rgba(117, 111, 111, 0.4) 0.31vw, transparent 0.27vw),
-                radial-gradient(circle at 45% 90%, rgba(118, 112, 113, 0.43) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 45% 87%, rgba(151, 141, 141, 0.44) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 73% 20%, rgba(145, 134, 134, 0.55) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 79% 20%, rgba(171, 157, 157, 0.41) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 75% 15%, rgba(161, 151, 151, 0.45) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 30% 90%, rgba(135, 127, 127, 0.42) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 40% 91%, rgba(111, 108, 108, 0.39) 0.21vw, transparent 0.62vw),
-                radial-gradient(circle at 60% 95%, rgba(93, 86, 87, 0.4) 0.41vw, transparent 0.62vw),
-                radial-gradient(circle at 70% 91%, rgba(97, 91, 91, 0.39) 0.41vw, transparent 0.59vw),
-                radial-gradient(circle at 72% 87%, rgba(101, 95, 95, 0.44) 0.41vw, transparent 0.52vw),
-                radial-gradient(circle at 73% 91%, rgba(160, 159, 159, 0.53) 0.21vw, transparent 0.42vw),
-                radial-gradient(circle at 77% 83%, rgba(183, 172, 172, 0.51) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 79% 81%, rgba(178, 166, 166, 0.45) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 66% 91%, rgba(183, 170, 171, 0.51) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 32% 14%, rgba(193, 180, 180, 0.48) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 30% 13%, rgba(135, 128, 128, 0.5) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 28% 17%, rgba(132, 125, 125, 0.41) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 25% 18%, rgba(181, 166, 166, 0.43) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 22% 14%, rgba(154, 149, 149, 0.61) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 18% 18%, rgba(177, 172, 172, 0.45) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 16% 19%, rgba(158, 147, 147, 0.49) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 16% 29%, rgba(170, 152, 152, 0.41) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 35% 16%, rgba(117, 109, 109, 0.47) 0.23vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 13%, rgba(98, 98, 102, 0.6) 0.23vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 8%, rgba(180, 180, 180, 0.5) 0.23vw, transparent 0.18vw),
-                radial-gradient(circle at 62% 92%, rgba(133, 117, 117, 1) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 62% 88%, rgba(169, 166, 166, 0.56) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 60% 90%, rgba(133, 117, 117, 0.54) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 90% 60%, rgba(185, 181, 181, 0.46) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 75% 20%, rgba(130, 112, 112, 0.52) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 70% 88%, rgba(182, 174, 174, 0.5) 0.31vw, transparent 0.25vw),
-                radial-gradient(circle at 30% 0%, rgba(180, 180, 180, 0.5) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 50% 10%, rgba(200, 200, 200, 0.4) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 70% 15%, rgba(172, 166, 166, 0.51) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 90% 25%, rgba(180, 180, 180, 0.4) 0.23vw, transparent 0.22vw),
-                radial-gradient(circle at 9% 55%, rgba(191, 186, 186, 0.46) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 5% 58%, rgba(191, 186, 186, 0.46) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 25% 85%, rgba(180, 180, 180, 0.5) 0.22vw, transparent 0.27vw),
-                radial-gradient(circle at 13% 35%, rgba(180, 180, 180, 0.5) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 60% 9%, rgba(180, 180, 180, 0.5) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 13% 45%, rgba(158, 146, 146, 0.56) 0.22vw, transparent 0.25vw),
-                radial-gradient(circle at 5% 55%, rgba(200, 200, 200, 0.4) 0.24vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 15%, rgba(180, 180, 180, 0.5) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 16% 65%, rgba(180, 180, 180, 0.5) 0.19vw, transparent 0.15vw),
-                radial-gradient(circle at 9% 45%, rgba(200, 200, 200, 0.4) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 20% 75%, rgba(181, 168, 171, 0.52) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 65%, rgba(149, 145, 146, 0.45) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 70%, rgba(170, 163, 164, 0.53) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 90% 35%, rgba(200, 200, 200, 0.4) 0.19vw, transparent 0.24vw),
-                radial-gradient(circle at 15% 40%, rgba(167, 153, 153, 0.39) 0.26vw, transparent 0.21vw),
-                radial-gradient(circle at 10% 40%, rgba(147, 142, 142, 0.54) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 85% 70%, rgba(147, 142, 142, 0.54) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 80% 70%, rgba(147, 142, 142, 0.54) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 85% 80%, rgba(146, 140, 140, 0.87) 0.23vw, transparent 0.38vw),
-                radial-gradient(circle at 8% 60%, rgba(200, 200, 200, 0.4) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 10% 70%, rgba(145, 140, 140, 0.87) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 55% 95%, rgba(200, 200, 200, 0.4) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 16%, rgba(117, 109, 109, 0.47) 0.13vw, transparent 0.28vw),
-                radial-gradient(circle at 35% 13%, rgba(98, 98, 102, 0.6) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 30% 8%, rgba(146, 141, 141, 0.51) 0.33vw, transparent 0.18vw),
-                radial-gradient(circle at 62% 88%, rgba(133, 117, 117, 1) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 60% 90%, rgba(133, 117, 117, 0.54) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 90% 60%, rgba(185, 181, 181, 0.46) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 90% 54%, rgba(162, 152, 152, 0.51) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 88% 50%, rgba(193, 188, 188, 0.55) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 90% 64%, rgba(156, 146, 146, 0.48) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 91% 68%, rgba(164, 151, 151, 0.47) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 92% 61%, rgba(167, 159, 159, 0.42) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 87% 61%, rgba(161, 150, 150, 0.42) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 89% 45%, rgba(160, 152, 152, 0.46) 0.21vw, transparent 0.29vw),
-                radial-gradient(circle at 86% 43%, rgba(139, 132, 132, 0.46) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 89% 44%, rgba(129, 123, 123, 0.49) 0.21vw, transparent 0.25vw),
-                radial-gradient(circle at 85% 443%, rgba(137, 130, 130, 0.51) 0.21vw, transparent 0.27vw),
-                radial-gradient(circle at 75% 20%, rgba(130, 112, 112, 0.52) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 70% 87%, rgba(154, 151, 151, 0.54) 0.1vw, transparent 0.35vw),
-                radial-gradient(circle at 20% 20%, rgba(155, 143, 143, 0.47) 0.16vw, transparent 0.21vw);
-                
-            background-size: 100% 100%;
-            background-clip: border-box; 
-            background-origin: border-box; 
-            animation: rotateAsteroidBelt 150s linear infinite; 
-            box-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.03); 
-        }
+    h1 {
+        color: #FFFFFF; /* Deeper blue for main title */
+        font-size: 3em; /* Larger font size */
+        margin: 0; /* Remove default margin */
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        letter-spacing: 1.5px;
+    }
+    h2 {
+        color: #FFFFFF; /* Slightly lighter blue for subtitle */
+        font-size: 1.2em;
+        margin-top: 10px; /* Space below h1 */
+        margin-bottom: 0px; /* No extra space below h2 */
         
-        /* کلاس جدید برای کمربند کویپر - کپی از کمربند سیارکی */
-        .kuiper-belt {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(0deg); 
-            width: var(--kuiper-belt-size); /* استفاده از متغیر جدید */
-            height: var(--kuiper-belt-size); /* استفاده از متغیر جدید */
-            border-radius: 50%;
-            z-index: -1; /* زیر تمام سیارات و مدارها قرار می‌گیرد */
+    }
+    #subtitle {
+        font-size: 1.2em;
+        color: #FFFFFF;
+        margin-top: 5px;
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
+    }
+    /* ************** تنظیمات محصولات جدید ************** */
+    .subtitle-text {
+        color: #FFC107; /* رنگ جدید: زرد پررنگ (آمبر) */
+        font-weight: bold; /* پررنگ‌تر شدن برای برجسته‌سازی */
+        font-size: 1.3em; /* کمی بزرگتر از زیرنویس عادی */
+    }
+    #address {
+        z-index: 1; /* Bring to front */
+        border-top: 2px solid #FFFFFF; /* NEW: Separator as requested for 'above address' change */
+        padding-top: 15px; /* NEW: Space above the separator */
+        margin-top: 15px; /* NEW: Space below title section */
+    }
+    #address p {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #FFFFFF;
+    }
+    #address a {
+        color: #444; /* Darker blue for links */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    #address a:hover {
+        color: #4A4C9C;
+    }
+    #loginSection, #clearCartButtonSection {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px; /* Space between buttons */
+        position: relative; /* Add this */
+        z-index: 2; /* Layer 3: Buttons and controls on main section */
+    }
+    #clearCartButtonSection {
+        margin-top: 20px;
+        display: none; /* Hide by default, show with JS */
+    }
+    /* تنظیمات کلید ورود به گالری و سبد خرید */
+    button {
+    background-color: #056EFFA8;
+    color: white;
+    border: none;
+    padding: 4px 20px;
+    margin: 5px;
+    box-shadow: 0  2px 5px rgba(1, 1, 5);
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    button:hover {
+      background-color: #1976d2;
+      transform: translateY(-3px); /* Lift effect on hover */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    button.remove-btn {
+      background-color: #f44336;
+      box-shadow: none; /* No shadow for small buttons */
+    }
+    button.remove-btn:hover {
+      background-color: #d32f2f;
+      transform: none; /* No lift for small buttons */
+    }
+    button.clear-cart-btn {
+      background-color: #ff9800; /* Orange for clear cart */
+    }
+    button.clear-cart-btn:hover {
+      background-color: #fb8c00;
+    }
+    /* NEW: Style for the cart button when it has items *//*تنظینات کلید سبد خرید*/
+    #showCartBtn.cart-has-items {
+        background-color: #ff9800; /* Bright Yellow (Amber) - Requested color */
+        color: #FDF5F5; /* Dark text for better contrast */
+        border: 2px solid #FFA000; /* Darker yellow border */
+        font-weight: bold; /* Make the text bolder */
+    }
+    #showCartBtn.cart-has-items:hover {
+        background-color: #FFA000; /* Darker on hover */
+        border-color: #FFC107;
+        transform: translateY(-3px); /* Keep the lift effect */
+    }
+    /* Ensure the SVG icon also changes color for contrast */
+    #showCartBtn.cart-has-items svg.cart-icon {
+        fill: #FFFFFF;
+    }
+    /* Style for quantity dropdowns in both gallery and cart */
+    .quantity-select {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      width: 70px; /* عرض ثابت برای جا شدن عدد چهار رقمی */
+      min-width: 50px; /* حداقل عرض مجاز */
+      max-width: 70px; /* حداکثر عرض مجاز */
+      box-sizing: border-box; /* برای اینکه پدینگ و بردر روی عرض حساب بشن */
+      text-align: center; /* متن داخلش وسط‌چین بشه */
+  }
+    /* Style for the Group Selection dropdown */
+    .group-select-fixed { /* دروپ‌داون انتخاب سایزهای دیگر */
+        width: 160px;
+        min-width: 100px;
+        max-width: 200px;
+        padding: 6px;
+        border-radius: 20px;
+        border: 2px solid #1044E3;
+        margin: 5px;
+        box-sizing: border-box;
+        text-align: right;
+        font-size: 18px; /* اندازه فونت را به ۱۸ پیکسل تغییر دادیم */
+    }
+    /* Main sections styling */
+    #adminLogin, #gallery, #cartSection {
+        margin-top: 10px; /* فاصله گالری از بالا */
+        flex-grow: 1; /* Allow sections to take available space */
+        display: none; /* Hidden by default, controlled by JS */
+        flex-direction: column; /* For consistent layout */
+    }
+    /* استایل برای فیلدهای ورودی تعداد در گالری (جدید) */
+    .quantity-input {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      width: 60px; /* عرض ثابت برای جا شدن عدد سه رقمی */
+      min-width: 50px; /* حداقل عرض مجاز */
+      max-width: 70px; /* حداکثر عرض مجاز */
+      box-sizing: border-box; /* برای اینکه پدینگ و بردر روی عرض حساب بشن */
+      text-align: center; /* متن داخلش وسط‌چین بشه */
+    }
+    
+    /* Admin login is hidden by default, shown by JS only on title click */
+    #adminLogin {
+        display: none;
+    }
+    #cartSection {
+      background: #fff; /* بکگراند سبد خرید */
+      padding: 15px;
+      border-radius: 10px;
+      text-align: right;
+    }
+    #address {
+      margin-top: 10px;
+    }
+    .image-box {
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #01579B;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(50% - 15px); /* Default for 2 items per row with gap */
+      box-sizing: border-box; /* Include padding/border in width */
+    }
 
-            /* استفاده از border برای ایجاد نوار کمربند */
-            border: 5vw solid transparent; /* کمی نازک‌تر برای دورتر بودن */
+    /* تغییرات: استفاده از کلاس جدید برای ظرف تصاویر داخل گالری */
+    .image-container-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      flex-grow: 1;
+    }
+    
+    /* تغییرات: استایل عنوان گروه */
+    #gallery h2 {
+      text-align: center;
+      color: #FFC107; ;
+      margin: 20px 0;
+    }
 
-            /* پس‌زمینه برای نمایش سیارک‌ها (کپی شده از .asteroid-belt) */
-            background: 
-                radial-gradient(circle at 11% 16%, rgba(180, 180, 180, 0.3) 0.15vw, transparent 0.2vw),
-                radial-gradient(circle at 26% 0%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 46% 6%, rgba(200, 200, 200, 0.2) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 5% 50%, rgba(191, 186, 186, 0.26) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 5% 56%, rgba(191, 186, 186, 0.26) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 21% 81%, rgba(180, 180, 180, 0.3) 0.22vw, transparent 0.27vw),
-                radial-gradient(circle at 9% 34%, rgba(144, 135, 135, 0.43) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 64% 15%, rgba(180, 180, 180, 0.3) 0.17vw, transparent 0.15vw),
-                radial-gradient(circle at 12% 49%, rgba(125, 101, 101, 0.51) 0.2vw, transparent 0.75vw),
-                radial-gradient(circle at 5% 61%, rgba(115, 108, 109, 0.27) 0.31vw, transparent 0.52vw),
-                radial-gradient(circle at 35% 15%, rgba(180, 180, 180, 0.3) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 36% 10%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 9% 39%, rgba(144, 138, 138, 0.23) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 20% 75%, rgba(181, 168, 171, 0.32) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 65%, rgba(149, 145, 146, 0.25) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 70%, rgba(170, 163, 164, 0.33) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 90% 29%, rgba(200, 200, 200, 0.2) 0.19vw, transparent 0.24vw),
-                radial-gradient(circle at 80% 29%, rgba(200, 200, 200, 0.2) 0.19vw, transparent 0.24vw),
-                radial-gradient(circle at 15% 40%, rgba(167, 153, 153, 0.19) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 10% 40%, rgba(147, 142, 142, 0.34) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 85% 70%, rgba(147, 142, 142, 0.34) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 80% 70%, rgba(147, 142, 142, 0.34) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 85% 70%, rgba(146, 140, 130, 0.67) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 48% 10%, rgba(200, 200, 200, 0.2) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 10% 70%, rgba(145, 140, 140, 0.67) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 55% 95%, rgba(200, 200, 200, 0.2) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 16%, rgba(117, 109, 109, 0.27) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 13%, rgba(98, 98, 102, 0.4) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 8%, rgba(129, 125, 125, 0.34) 0.13vw, transparent 0.78vw),
-                radial-gradient(circle at 62% 92%, rgba(133, 117, 117, 0.8) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 60% 90%, rgba(133, 117, 117, 0.34) 0.21vw, transparent 0.6vw),
-                radial-gradient(circle at 90% 60%, rgba(185, 181, 181, 0.26) 0.21vw, transparent 0.42vw),
-                radial-gradient(circle at 75% 20%, rgba(130, 112, 112, 0.32) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 55% 88%, rgba(147, 138, 138, 0.28) 0.18vw, transparent 0.4vw),
-                radial-gradient(circle at 30% 0%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.4vw),
-                radial-gradient(circle at 50% 10%, rgba(200, 200, 200, 0.2) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 70% 10%, rgba(172, 166, 166, 0.31) 0.15vw, transparent 0.2vw),
-                radial-gradient(circle at 56% 5%, rgba(180, 180, 180, 0.2) 0.18vw, transparent 0.22vw),
-                radial-gradient(circle at 5% 55%, rgba(191, 186, 186, 0.26) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 5% 58%, rgba(191, 186, 186, 0.26) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 25% 85%, rgba(180, 180, 180, 0.3) 0.22vw, transparent 0.47vw),
-                radial-gradient(circle at 13% 35%, rgba(180, 180, 180, 0.3) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 60% 5%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 13% 45%, rgba(180, 180, 180, 0.3) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 5% 95%, rgba(200, 200, 200, 0.2) 0.17vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 15%, rgba(180, 180, 180, 0.3) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 16% 70%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 40% 15%, rgba(200, 200, 200, 0.2) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 20% 75%, rgba(181, 168, 171, 0.32) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 65%, rgba(149, 145, 146, 0.25) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 70%, rgba(170, 163, 164, 0.33) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 90% 25%, rgba(200, 200, 200, 0.2) 0.39vw, transparent 0.24vw),
-                radial-gradient(circle at 15% 40%, rgba(167, 153, 153, 0.19) 0.26vw, transparent 0.21vw),
-                radial-gradient(circle at 10% 40%, rgba(147, 142, 142, 0.34) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 85% 70%, rgba(147, 142, 142, 0.34) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 80% 70%, rgba(147, 142, 142, 0.34) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 85% 80%, rgba(146, 140, 140, 0.67) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 8% 60%, rgba(200, 200, 200, 0.2) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 20% 70%, rgba(145, 140, 140, 0.67) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 55% 95%, rgba(118, 109, 109, 0.2) 0.31vw, transparent 0.22vw),
-                radial-gradient(circle at 50% 90%, rgba(117, 111, 111, 0.2) 0.31vw, transparent 0.27vw),
-                radial-gradient(circle at 45% 90%, rgba(118, 112, 113, 0.23) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 45% 87%, rgba(151, 141, 141, 0.24) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 73% 20%, rgba(145, 134, 134, 0.35) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 79% 20%, rgba(171, 157, 157, 0.21) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 75% 15%, rgba(161, 151, 151, 0.25) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 30% 90%, rgba(135, 127, 127, 0.22) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 40% 91%, rgba(111, 108, 108, 0.19) 0.21vw, transparent 0.62vw),
-                radial-gradient(circle at 60% 95%, rgba(93, 86, 87, 0.2) 0.41vw, transparent 0.62vw),
-                radial-gradient(circle at 70% 91%, rgba(97, 91, 91, 0.19) 0.41vw, transparent 0.59vw),
-                radial-gradient(circle at 72% 87%, rgba(101, 95, 95, 0.24) 0.41vw, transparent 0.52vw),
-                radial-gradient(circle at 73% 91%, rgba(160, 159, 159, 0.33) 0.21vw, transparent 0.42vw),
-                radial-gradient(circle at 77% 83%, rgba(183, 172, 172, 0.31) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 79% 81%, rgba(178, 166, 166, 0.25) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 66% 91%, rgba(183, 170, 171, 0.31) 0.31vw, transparent 0.32vw),
-                radial-gradient(circle at 32% 14%, rgba(193, 180, 180, 0.28) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 30% 13%, rgba(135, 128, 128, 0.3) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 28% 17%, rgba(132, 125, 125, 0.21) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 25% 18%, rgba(181, 166, 166, 0.23) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 22% 14%, rgba(154, 149, 149, 0.41) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 18% 18%, rgba(177, 172, 172, 0.25) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 16% 19%, rgba(158, 147, 147, 0.29) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 16% 29%, rgba(170, 152, 152, 0.21) 0.33vw, transparent 0.38vw),
-                radial-gradient(circle at 35% 16%, rgba(117, 109, 109, 0.27) 0.23vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 13%, rgba(98, 98, 102, 0.4) 0.23vw, transparent 0.18vw),
-                radial-gradient(circle at 35% 8%, rgba(180, 180, 180, 0.3) 0.23vw, transparent 0.18vw),
-                radial-gradient(circle at 62% 92%, rgba(133, 117, 117, 0.8) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 62% 88%, rgba(169, 166, 166, 0.36) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 60% 90%, rgba(133, 117, 117, 0.34) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 90% 60%, rgba(185, 181, 181, 0.26) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 75% 20%, rgba(130, 112, 112, 0.32) 0.28vw, transparent 0.23vw),
-                radial-gradient(circle at 70% 88%, rgba(182, 174, 174, 0.3) 0.31vw, transparent 0.25vw),
-                radial-gradient(circle at 30% 0%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 50% 10%, rgba(200, 200, 200, 0.2) 0.2vw, transparent 0.25vw),
-                radial-gradient(circle at 70% 15%, rgba(172, 166, 166, 0.31) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 90% 25%, rgba(180, 180, 180, 0.2) 0.23vw, transparent 0.22vw),
-                radial-gradient(circle at 9% 55%, rgba(191, 186, 186, 0.26) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 5% 58%, rgba(191, 186, 186, 0.26) 0.12vw, transparent 0.17vw),
-                radial-gradient(circle at 25% 85%, rgba(180, 180, 180, 0.3) 0.22vw, transparent 0.27vw),
-                radial-gradient(circle at 13% 35%, rgba(180, 180, 180, 0.3) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 60% 9%, rgba(180, 180, 180, 0.3) 0.1vw, transparent 0.15vw),
-                radial-gradient(circle at 13% 45%, rgba(158, 146, 146, 0.36) 0.22vw, transparent 0.25vw),
-                radial-gradient(circle at 5% 55%, rgba(200, 200, 200, 0.2) 0.24vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 15%, rgba(180, 180, 180, 0.3) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 16% 65%, rgba(180, 180, 180, 0.3) 0.19vw, transparent 0.15vw),
-                radial-gradient(circle at 9% 45%, rgba(200, 200, 200, 0.2) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 20% 75%, rgba(181, 168, 171, 0.32) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 65%, rgba(149, 145, 146, 0.25) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 15% 70%, rgba(170, 163, 164, 0.33) 0.21vw, transparent 0.26vw),
-                radial-gradient(circle at 90% 35%, rgba(200, 200, 200, 0.2) 0.19vw, transparent 0.24vw),
-                radial-gradient(circle at 15% 40%, rgba(167, 153, 153, 0.19) 0.26vw, transparent 0.21vw),
-                radial-gradient(circle at 10% 40%, rgba(147, 142, 142, 0.34) 0.16vw, transparent 0.21vw),
-                radial-gradient(circle at 85% 70%, rgba(147, 142, 142, 0.34) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 80% 70%, rgba(147, 142, 142, 0.34) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 85% 80%, rgba(146, 140, 140, 0.67) 0.23vw, transparent 0.38vw),
-                radial-gradient(circle at 8% 60%, rgba(200, 200, 200, 0.2) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 10% 70%, rgba(145, 140, 140, 0.67) 0.23vw, transparent 0.28vw),
-                radial-gradient(circle at 55% 95%, rgba(200, 200, 200, 0.2) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 35% 16%, rgba(117, 109, 109, 0.27) 0.13vw, transparent 0.28vw),
-                radial-gradient(circle at 35% 13%, rgba(98, 98, 102, 0.4) 0.13vw, transparent 0.18vw),
-                radial-gradient(circle at 30% 8%, rgba(146, 141, 141, 0.31) 0.33vw, transparent 0.18vw),
-                radial-gradient(circle at 62% 88%, rgba(133, 117, 117, 0.8) 0.21vw, transparent 0.32vw),
-                radial-gradient(circle at 60% 90%, rgba(133, 117, 117, 0.34) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 90% 60%, rgba(185, 181, 181, 0.26) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 90% 54%, rgba(162, 152, 152, 0.31) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 88% 50%, rgba(193, 188, 188, 0.35) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 90% 64%, rgba(156, 146, 146, 0.28) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 91% 68%, rgba(164, 151, 151, 0.27) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 92% 61%, rgba(167, 159, 159, 0.22) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 87% 61%, rgba(161, 150, 150, 0.22) 0.21vw, transparent 0.2vw),
-                radial-gradient(circle at 89% 45%, rgba(160, 152, 152, 0.26) 0.21vw, transparent 0.29vw),
-                radial-gradient(circle at 86% 43%, rgba(139, 132, 132, 0.26) 0.21vw, transparent 0.22vw),
-                radial-gradient(circle at 89% 44%, rgba(129, 123, 123, 0.29) 0.21vw, transparent 0.25vw),
-                radial-gradient(circle at 85% 443%, rgba(137, 130, 130, 0.31) 0.21vw, transparent 0.27vw),
-                radial-gradient(circle at 75% 20%, rgba(130, 112, 112, 0.32) 0.18vw, transparent 0.23vw),
-                radial-gradient(circle at 70% 87%, rgba(154, 151, 151, 0.34) 0.1vw, transparent 0.35vw),
-                radial-gradient(circle at 20% 20%, rgba(155, 143, 143, 0.27) 0.16vw, transparent 0.21vw);
-                
-            background-size: 100% 100%;
-            background-clip: border-box; 
-            background-origin: border-box; 
-            animation: rotateAsteroidBelt var(--kuiper-speed) linear infinite; /* استفاده از سرعت جدید */
-            box-shadow: 0 0 0.5vw rgba(255, 255, 255, 0.01); /* سایه کم رنگ‌تر */
-        }
-        
-        @keyframes rotateAsteroidBelt {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
+    img {
+      width: 100%;
+      height: auto; /* Reverted to auto for original aspect ratio */
+      border-radius: 8px;
+      margin-bottom: 5px;
+      cursor: pointer; /* اضافه شدن این خط برای نشان دادن قابلیت کلیک */
+    }
 
+    select, input[type="password"] {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      width: calc(100% - 10px); /* Adjust width */
+      box-sizing: border-box; /* Include padding/border in width */
+    }
+    
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        border-bottom: 1px dashed #eee;
+    }
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .cart-item-info {
+        text-align: right;
+        flex-grow: 1; /* Allow info section to take available space */
+        margin-left: 10px; /* Space between info and controls */
+    }
+    .cart-item-actions {
+        display: flex;
+        align-items: center;
+    }
+    .cart-item-actions span {
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .cart-item-actions button {
+      margin-left: 50px;
+    }
+    /* Controls at the top/bottom of gallery */
+  .gallery-controls {
+      display: flex;
+      flex-direction: column; /* تغییر جدید برای چیدمان عمودی */
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #FFFFFF;
+      border-top: 2px solid #1577EA;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+}
+  .group-selection-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 0;
+  }
+    #gallery-bottom-controls {
+        margin-top: auto;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: none;
+    }
+    #gallery-top-controls {
+        margin-bottom: 10px;
+        border-top: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .gallery-controls button {
+        margin: 0;
+    }
+    .in-cart-display { 
+        font-size: 0.85em;
+        color: #4FC3F7;
+        font-weight: bold;
+        margin-right: 0;
+    }
+    /* New style for the wrapper of home and cart buttons in gallery */
+    .gallery-button-wrapper {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+@media (max-width: 600px) {
+    .image-box {
+        width: calc(50% - 15px);
+    }
+   .gallery-controls {
+    flex-direction: column;
+    gap: 10px;
+}
+.gallery-button-wrapper, .group-selection-wrapper {
+    width: calc(100% - 20px);
+    justify-content: center;
+    margin: 0;
+}
+.gallery-button-wrapper button {
+    flex: 1 1 auto;
+}
+.group-selection-wrapper select {
+    flex: 1 1 auto;
+}
+    .in-cart-display {
+        text-align: center;
+    }
+}
+  /* CSS برای اعلان‌های سبد خرید */
+    #notification-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 300px;
+    }
+    
+    .notification {
+      background-color: #2196F3E6;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      font-size: 0.9em;
+      direction: rtl;
+    }
+    .notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .notification.hide {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    /* استایل برای فرم اطلاعات مشتری */
+    .customer-info-form {
+      margin-top: 20px;
+      text-align: right;
+      background-color: #fffde7;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+    }
+    .customer-info-form h4 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .customer-info-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .customer-info-form input[type="text"],
+    .customer-info-form input[type="tel"],
+    .customer-info-form textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .customer-info-form textarea {
+      resize: vertical;
+    }
 
-        .jupiter-orbit { width: var(--jupiter-orbit-size); height: var(--jupiter-orbit-size); animation-duration: var(--jupiter-speed); }
-        .jupiter { width: var(--jupiter-size); height: var(--jupiter-size); background-color: #c9884e; }
-
-        .saturn-orbit { width: var(--saturn-orbit-size); height: var(--saturn-orbit-size); animation-duration: var(--saturn-speed); }
-        .saturn { width: var(--saturn-size); height: var(--saturn-size); background-color: #d1b47c; position: relative; }
-        .saturn .ring {
-            position: absolute;
-            width: 4vw;
-            height: 4vw;
-            border: 0.2vw solid rgba(209, 180, 124, 0.5);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotateX(70deg);
-            z-index: -1;
-        }
-
-        .uranus-orbit { width: var(--uranus-orbit-size); height: var(--uranus-orbit-size); animation-duration: var(--uranus-speed); }
-        .uranus { width: var(--uranus-size); height: var(--uranus-size); background-color: #6ac9c9; }
-
-        .neptune-orbit { width: var(--neptune-orbit-size); height: var(--neptune-orbit-size); animation-duration: var(--neptune-speed); }
-        .neptune { width: var(--neptune-size); height: var(--neptune-size); background-color: #4a77d4; }
-
-        @keyframes orbit-animation {
-            from {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            to {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-        .planet-info-container {
-            width: 90vw;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .planet-info-row {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 15px;
-            flex-direction: row-reverse;
-        }
-
-        .planet-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            width: 23%;
-        }
-
-        .planet-card:hover {
-            transform: scale(1.1);
-        }
-
-        .info-planet {
-            width: 5vw;
-            height: 5vw;
-            border-radius: 50%;
-            margin-bottom: 5px;
-            box-shadow: 0 0 1vw rgba(255, 255, 255, 0.2);
-        }
-
-        .mercury-info { background-color: #a0a0a0; }
-        .venus-info { background-color: #e0c060; }
-        .earth-info { background-color: #007bff; }
-        .mars-info { background-color: #e45831; }
-        .jupiter-info { background-color: #c9884e; }
-        .saturn-info { background-color: #d1b47c; }
-        .uranus-info { background-color: #6ac9c9; }
-        .neptune-info { background-color: #4a77d4; }
-
-        /* Modal styles */
-        #modal-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            z-index: 100;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #1a1a2e;
-            color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 800px;
-            width: 90%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            position: relative;
-            max-height: 90vh; 
-            /* !!! این خط برای فعال کردن اسکرول عمودی اضافه شده است !!! */
-            overflow-y: auto; }
-            
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #ffcc00;
-            padding-bottom: 10px;
-            margin-bottom: 10px;
-        }
-        .modal-content h2 {
-            color: #ffcc00;
-            border-bottom: 2px solid #ffcc00;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .modal-header h2 {
-            font-size: 7vw;
-            margin: 0;
-        }
-
-        .close-button {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 8vw;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .modal-body p {
-            font-size: 5vw;
-            line-height: 1.5;
-            color: #ccc;
-            line-height: 1.8;
-            text-align: justify; /* برای تراز و یکدست کردن خطوط متن */
-    text-align-last: center; /* برای اینکه آخرین خط (اگر کوتاه باشد) وسط‌چین قرار بگیرد */
-    margin-bottom: 0;
-        }
-
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background:
-                radial-gradient(2px 2px at 20px 50px, #EEEEEE82, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 30px 70px, #FFFFFF7D, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 80px 10px, #DDDDDD78, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 150px 90px, #FFFFFF57, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 330px 20px, #EEEEEE73, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 200px 20px, #EEEEEE70, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 260px 70px, #DDDDDD69, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 270px 20px, #EEEEEE73, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 330px 60px, #EEEEEE6E, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 335px 52px, #FFFFFF63, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 60% 20%, #FFFFFF87, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 10% 90%, #EEEEEE80, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 20% 20%, #DDDDDD66, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 5% 30%, #FFFFFF5E, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 70% 25%, #EEEEEE57, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 35% 10%, #DDDDDD63, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 15% 5%, #FFFFFF6B, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 25% 21%, #EEEEEE6B, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 5% 5%, #DDDDDD6B, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 95% 95%, #FFFFFF69, rgba(0,0,0,0));
-            background-size: 500px 500px;
-            animation: stars-flicker 20s infinite;
-        }
-
-        @keyframes stars-flicker {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 0.5; }
-            20%, 70% { opacity: 1; }
-            40%, 90% { opacity: 0.7; }
-        }
-
-        @keyframes background-flicker {
-            0%, 100% { background-color: #0d0d1a; }
-            50% { background-color: #0c0c19; }
-        }
-        .header-logo {
-            width: 10vw;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* Change this line */
-            transition: transform 3s ease-in-out;
-            cursor: pointer;
-        }
-        .header-logo.enlarged {
-            /* Change these lines */
-            transform: translate(-50%, -50%) scale(9.5);
-        }
-
-        /* --- New styles for Hamburger Menu --- */
-        .hamburger-menu {
-            position: fixed;
-            top: 30px;
-            right: 15px;
-            z-index: 101; /* Above everything but modal */
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px; /* پهنای آیکون */
-            height: 20px; /* ارتفاع آیکون */
-            background: none;
-            border: none;
-            padding: 0;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 100%;
-            height: 0.2px; /* ضخامت هر خط */
-            background-color: white;
-            border-radius: 1px;
-            transition: all 0.3s linear;
-            transform-origin: 1px;
-        }
-
-        /* Side Menu Panel Styles */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 0; /* Initially hidden */
-            max-width: 300px;
-            background-color: rgba(26, 26, 46, 0.95); /* #1a1a2e with some transparency */
-            backdrop-filter: blur(8px);
-            z-index: 100;
-            overflow-x: hidden;
-            transition: width 0.5s ease-in-out;
-            padding-top: 60px;
-            direction: rtl;
-            text-align: right;
-            border-left: 2px solid #4a77d4;
-        }
-
-        .side-menu.open {
-            width: 50vw; /* Adjust width as needed */
-        }
-
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        .side-menu ul li {
-            padding: 1px 20px;
-            border-bottom: 1px solid #444;
-            cursor: pointer;
-            font-size: 4vw; /* Responsive font size for menu items */
-            transition: background-color 0.2s;
-        }
-
-        .side-menu ul li:hover {
-            background-color: #30304a;
-        }
-
-        .side-menu .close-menu {
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-size: 8vw;
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Responsive adjustments for modal and menu */
-        @media (min-width: 600px) {
-            .modal-header h2 {
-                font-size: 30#42445Apx; 
-            }
-            .modal-body p {
-                font-size: 18px; 
-            }
-            .close-button {
-                font-size: 40px;
-            }
-            .side-menu.open {
-                width: 300px; 
-            }
-            .side-menu ul li {
-                font-size: 16px; 
-            }
-            .side-menu .close-menu {
-                font-size: 40px;
-            }
-            .subtitle {
-            text-align: center;
-            font-size: 6vw;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            opacity: 0.7;
-        }
-
-        /* --- تنظیمات دسکتاپ: حفظ نظم موبایل با محدود کردن حداکثر اندازه عناصر متنی در صفحه نمایش بزرگ --- */
-        @media screen and (min-width: 1024px) {
-            /* محدود کردن اندازه فونت‌ها در دسکتاپ برای جلوگیری از بزرگ شدن بیش از حد در نمایشگرهای عریض */
-            h1 {
-                font-size: 60px; /* اندازه ثابت مناسب برای دسکتاپ */
-            }
-            .subtitle {
-                font-size: 40px; /* اندازه ثابت مناسب برای دسکتاپ */
-            }
-            
-            /* نکته: موقعیت و اندازه‌های سیارات و مدارها (با واحدهای vw) حفظ شده‌اند، 
-               که این "نظم" چیدمان را به هم نمی‌زند. */
-        }
-        /* --- پایان تنظیمات دسکتاپ --- */
-        
-        .solar-system {
-            position: relative;
-            
-        }
-    </style>
+    /* Modal for image zoom */
+    .image-modal {
+      display: none;
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .image-modal-content {
+      position: relative;
+      margin: auto;
+      display: block;
+      width: 90%;
+      max-width: 900px;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .previous-orders-modal {
+        display: none;
+        position: fixed;
+        z-index: 1002;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+        justify-content: center;
+        align-items: center;
+    }
+    .previous-orders-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 10px;
+        text-align: right;
+        max-height: 80vh; /* تغییر جدید برای محدود کردن ارتفاع */
+        overflow-y: auto; /* تغییر جدید برای فعال کردن اسکرول */
+    }
+    .previous-order-item {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .previous-order-item:last-child {
+        border-bottom: none;
+    }
+    .previous-order-item h4 {
+        color: #2196f3;
+        margin-top: 0;
+    }
+    .previous-order-item button {
+        margin-top: 10px;
+        background-color: #4CAF50;
+    }
+    .previous-order-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: flex-end;
+    }
+    .previous-order-buttons button.delete-btn {
+      background-color: #f44336;
+    }
+    .cart-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    
+  </style>
+  
 </head>
 <body>
-    <div class="stars"></div>
 
-    <button class="hamburger-menu" id="hamburger-btn">
-        <span></span>
-        <span></span>
-        <span></span>
+<div id="particles-js"></div>
+
+<div id="mainSection">
+  <div class="main-title-container">
+    <img src="https://akbari5561.github.io/PosterIran/icons/apple-touch-icon-180x180.png" alt="Poster Iran Logo" class="header-logo"> <h1>پوستر ایران</h1>
+    <p id="subtitle">چاپ انواع پوسترهای آموزشی</p>
+  </div>
+  <div class="marquee-container">
+      <p class="scrolling-text">انتشارات پوستر ایران با افتخار یکی از پیشگامان در زمینه تولید و چاپ پوستر در کشور است. ما با تکیه بر سال‌ها تجربه در زمینه چاپ و شناخت دقیق از نیازهای نظام آموزشی، مجموعه‌ای از پوسترهای جذاب، کاربردی و هماهنگ با محتوای کتب درسی مدارس تهیه کرده‌ایم تا فرآیند یادگیری را برای دانش‌آموزان ساده‌تر، عمیق‌تر و لذت‌بخش‌تر کنیم.
+
+پوسترهای آموزشی با طراحی حرفه‌ای، چاپ تمام‌رنگی، با کیفیت عالی و محتوای استاندارد، ابزاری کارآمد برای معلمان، دانش‌آموزان و مدارس در سراسر کشور به شمار می‌آیند. "پوستر ایران" همواره در تلاش است تا با نوآوری و پایبندی به اصول آموزشی، نقش مؤثری در ارتقاء سطح آموزش ایفا کند</p>
+  </div>
+  <div id="loginSection">
+    <button id="enterAsUserBtn">ورود به گالری</button>
+    <button id="showCartBtn">
+        <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </svg>
+        سبد خرید
     </button>
+</div>
+<div id="clearCartButtonSection">
+    <button id="clearCartMainBtn" class="clear-cart-btn">توجه: سبد خرید شما دارای محصول است. برای تکمیل آن وارد گالری شوید یا برای سفارش جدید سبد خرید را پاک کنید . </button>
+</div>
+  <div id="address">
+    <p>تهران : خیابان پانزده خرداد</p>
+    <p>بازار آهنگران ، کوچه مسجد جامع</p>
+    <p>پاساژ کاغذ و تحریر ، زیرزمین اول  پلاک۷۴</p>
+    <p> <a href="https://maps.google.com/?cid=1396884775989221050&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" style="text-decoration: none; color: #2196f3; font-weight: bold;">  (مشاهده در نقشه)</a></p>
+    <p>تلفـن : ۰۲۱۵۵۶۱۱۸۷۵</p>
+    <p>موبایل : ۰۹۰۱۰۱۹۵۸۸۵</p>
+  </div>
+  
+</div>
 
-    <div class="side-menu" id="side-menu">
-        <a href="#" class="close-menu" id="close-menu">&times;</a>
-        <ul>
-            <li data-planet="solar_system_main">منظومه خورشیدی</li>
-            <li data-planet="sun">خورشید</li>
-            <li data-planet="mercury">عطارد </li>
-            <li data-planet="venus">زهره </li>
-            <li data-planet="earth">زمین</li>
-            <li data-planet="mars">مریخ </li>
-            <li data-planet="jupiter">مشتری </li>
-            <li data-planet="saturn">زحل </li>
-            <li data-planet="uranus">اورانوس </li>
-            <li data-planet="neptune">نپتون </li>
-            <li data-planet="dwarf_planets">سیارات کوتوله</li> <li data-planet="moon">ماه</li>
-            <li data-planet="asteroid_belt">کمربند سیارکی</li>
-            <li data-planet="kuiper_belt">کمربند کویپر</li> <li data-planet="meteoroid">شهاب سنگ‌ها</li>
-            <li data-planet="comet">دنباله‌دارها</li>
-            <li data-planet="stars_types">ستارگان و انواع آن‌ها</li> <li data-planet="nebulae">سحابی‌ها</li> <li data-planet="milky_way">کهکشان راه شیری</li> <li data-planet="black_hole">سیاه چاله‌ها</li>
-            <li data-planet="satellite">ماهواره‌ها</li>
-            <li data-planet="spacecraft">سفینه فضایی</li>
-            <li data-planet="space_station">ایستگاه فضایی</li>
-            <li data-planet="space_history">تاریخچه اکتشافات فضایی</li> </ul>
-        </ul>
-    </div>
-    
-    <h1 id="solar-system-title">منظومه خورشیدی</h1>
-    <p class="subtitle">Solar System</p>
-    
-    <div class="solar-system">
-        <div class="sun">
-            <img src="https://PosterIran.github.io/solar-system/IranPoster.png" alt="لوگوی خورشید" class="header-logo">
-        </div>
-        <div class="orbit mercury-orbit"><div class="planet mercury"></div></div>
-        <div class="orbit venus-orbit"><div class="planet venus"></div></div>
-        <div class="orbit earth-orbit"><div class="planet earth"></div></div>
-        <div class="orbit mars-orbit"><div class="planet mars"></div></div>
-        <div class="asteroid-belt"></div>
-        <div class="orbit jupiter-orbit"><div class="planet jupiter"></div></div>
-        <div class="orbit saturn-orbit">
-            <div class="planet saturn"><div class="ring"></div></div>
-        </div>
-        <div class="orbit uranus-orbit"><div class="planet uranus"></div></div>
-        <div class="orbit neptune-orbit"><div class="planet neptune"></div></div>
+<div id="adminLogin">
+  <input type="password" id="adminPassword" placeholder="رمز ورود ادمین">
+  <button id="loginAsAdminBtn">ورود ادمین</button>
+</div>
+
+<div id="gallery">
+  <div id="imagesContainer" class="image-container"></div>
+  <div id="gallery-bottom-controls" class="gallery-controls">
+    <div class="group-selection-wrapper"> <label for="bottomGroupSelect">دسته بندی‌ها : ⬅  </label>
+      <select id="bottomGroupSelect" class="group-select-fixed">
+        <option value="1" selected>سایز ۲۹×۲۱ دوروچاپ</option>
+        <option value="2">سایز ۵۰×۳۵ یکروچاپ</option>
+        <option value="3">سایز ۵۰×۳۵ دوروچاپ</option>
+        <option value="4">سایز ۷۰×۵۰ یکروچاپ</option>
+        <option value="5">سایز ۷۰×۵۰ یووی‌دار</option>
+        <option value="6">سایر محصولات</option>
         
-        <div class="kuiper-belt"></div>
-        
-        <div class="comet">
-            <div class="comet-nucleus"></div>
-            <div class="comet-tail"></div>
-        </div>
+      </select>
     </div>
-    
-    <div class="planet-info-container">
-        <div class="planet-info-row">
-            <div class="planet-card" data-planet="mercury">
-                <div class="info-planet mercury-info"></div>
-                <div class="planet-name">عطارد</div>
-            </div>
-            <div class="planet-card" data-planet="venus">
-                <div class="info-planet venus-info"></div>
-                <div class="planet-name">زهره</div>
-            </div>
-            <div class="planet-card" data-planet="earth">
-                <div class="info-planet earth-info"></div>
-                <div class="planet-name">زمین</div>
-            </div>
-            <div class="planet-card" data-planet="mars">
-                <div class="info-planet mars-info"></div>
-                <div class="planet-name">مریخ</div>
-            </div>
-        </div>
-        <div class="planet-info-row">
-            <div class="planet-card" data-planet="jupiter">
-                <div class="info-planet jupiter-info"></div>
-                <div class="planet-name">مشتری</div>
-            </div>
-            <div class="planet-card" data-planet="saturn">
-                <div class="info-planet saturn-info"></div>
-                <div class="planet-name">زحل</div>
-            </div>
-            <div class="planet-card" data-planet="uranus">
-                <div class="info-planet uranus-info"></div>
-                <div class="planet-name">اورانوس</div>
-            </div>
-            <div class="planet-card" data-planet="neptune">
-                <div class="info-planet neptune-info"></div>
-                <div class="planet-name">نپتون</div>
-            </div>
-        </div>
+    <div class="gallery-button-wrapper">
+        <button id="showHomeGalleryBtn" onclick="showScreen('main')">
+            <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+            </svg>
+            صفحه اصلی
+        </button>
+        <button id="showCartGalleryBtn">
+            <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+            سبد خرید 
+        </button>
     </div>
+</div> </div>
+<div id="cartSection">
+  <h3>
+    <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </svg>
+    سبد خرید 
+  </h3>
+  <div id="cartList"></div>
+  <p id="totalPrice" style="font-weight: bold; font-size: 1.1em; margin-top: 15px;"></p>
+
+  <div class="customer-info-form">
+    <h4>اطلاعات مشتری:</h4>
+    <label for="customerName">نام و نام خانوادگی:</label>
+    <input type="text" id="customerName" placeholder="نام و نام خانوادگی خود را وارد کنید" required>
+
+    <label for="customerPhone">شماره موبایل:</label>
+    <input type="tel" id="customerPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required pattern="09[0-9]{9}" inputmode="numeric">
+
+    <label for="customerAddress">آدرس کامل تحویل:</label>
+    <textarea id="customerAddress" placeholder="آدرس دقیق، شامل استان، شهر، خیابان، کوچه، پلاک، واحد" rows="4" required></textarea>
+  </div>
+
+  <button id="submitOrderBtn" style="background-color: #25D366;">ارسال سفارش با واتس‌آپ</button>
+  <button id="clearCartCartBtn" class="clear-cart-btn">پاک کردن کل سبد خرید</button>
+  <button id="showGalleryCartBtn" style="background-color: #2196f3;">بازگشت به گالری 🔙 </button>
+  <button id="showPreviousOrdersBtn"style="background-color: #9C27B0;">سفارش‌های قبلی 📦</button>
+  
+</div>
+
+<div id="image-modal" class="image-modal">
+  <span class="close" onclick="closeImageModal()">×</span>
+  <img class="image-modal-content" id="modal-image">
+</div>
+
+<div id="previous-orders-modal" class="previous-orders-modal">
+    <div class="previous-orders-content">
+        <span class="close" onclick="closePreviousOrdersModal()">×</span>
+        <h3>سفارش‌های قبلی</h3>
+        <div id="previousOrdersList"></div>
+    </div>
+</div>
+
+<div id="notification-container"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+/* particles.js config */
+particlesJS('particles-js', {
+  "particles": {
+    "number": {
+      "value": 80,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.5,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+<script>
+// تغییرات اعمال شده: آرایه allowedQuantities از حالت سراسری حذف شده و به گروه های زیر اضافه شده است.
+const groupInfo = {
+    1: {
+        name: "سایز ۲۹×۲۱ دوروچاپ",
+        price: 125000,
+        // آرایه مخصوص گروه ۱
+        allowedQuantities: [0, 50, 100, 200, 300, 400, 500], 
+        images: [
+            { filename: "جدول دوستی تمرینی.jpg", name: "جدول دوستی تمرینی" },
+            { filename: "جدول دوستی کامل.jpg", name: "جدول دوستی کامل" },
+            { filename: "ضرب و تقسیم حیوانات.jpg", name: "ضرب و تقسیم حیوانات" },
+            { filename: "ضرب و تقسیم.jpg", name: "ضرب و تقسیم" },
+            { filename: "ضرب و تقسیم تمرینی.jpg", name: "ضرب و تقسیم تمرینی" },
+            { filename: "ضرب و تمرین ضرب.jpg", name: "ضرب و تمرین ضرب" },
+            { filename: "حساب آموز ششم.jpg", name: "حساب آموز ششم" },
+            { filename: "حساب آموز پنجم.jpg", name: "حساب آموز پنجم" },
+            { filename: "حساب آموز چهارم.jpg", name: "حساب آموز چهارم" },
+            { filename: "حساب آموز سوم.jpg", name: "حساب آموز سوم" },
+            { filename: "حساب آموز دوم (افقی).jpg", name: "حساب آموز دوم (افقی)" },
+            { filename: "حساب آموز دوم (عمودی).jpg", name: "حساب آموز دوم (عمودی)" },
+            { filename: "حساب آموز اول (افقی).jpg", name: "حساب آموز اول (افقی)" },
+            { filename: "حساب آموز اول (عمودی).jpg", name: "حساب آموز اول (عمودی)" },
+            { filename: "اعداد.jpg", name: "اعداد ساده" },
+            { filename: "اعداد با ساعت و محور.jpg", name: " اعداد با ساعت و محور" },
+            { filename: "جمع و تفریق.jpg", name: "جمع و تفریق" },
+            { filename: "آموزش زمان و ساعت.jpg", name: "آموزش زمان و ساعت" },
+            { filename: "الفبای فارسی و انگلیسی.jpg", name: "الفبای فارسی و انگلیسی" },
+            { filename: "محیط و مساحت اشکال هندسی.jpg", name: "محیط و مساحت اشکال هندسی" },
+            
+            /*{ filename: "جدول تقریب اعداد.jpg", name: "جدول تقریب اعداد" },
+            { filename: "جدول تناوبی عناصر.jpg", name: "جدول تناوبی عناصر" },
+            */
+            
+        ]
+    },
+    2: {
+        name: "سایز ۵۰×۳۵ یکروچاپ",
+        price: 125000,
+        // آرایه مخصوص گروه ۲
+        allowedQuantities: [0, 50, 100, 200, 300, 400, 500], 
+        images: [
+            { filename: "الفبای فارسی و شکل صداها.jpg", name: "الفبای فارسی و شکل صداها" },
+            { filename: "جدول دوستی.jpg", name: "جدول دوستی" },
+            { filename: "جدول ضرب کد 350.jpg", name: "جدول ضرب کد 350" },
+            { filename: "جدول ضرب کد 351.jpg", name: "جدول ضرب کد 351" },
+        ]
+    },
+    3: {
+        name: "سایز ۵۰×۳۵ دوروچاپ",
+        price: 250000,
+        // آرایه مخصوص گروه ۳
+        allowedQuantities: [0, 50, 100, 200, 300, 400, 500], 
+        images: [
+            { filename: "جدول دوستی کامل.jpg", name: "جدول دوستی کامل" },
+            { filename: "ضرب و تقسیم تمرینی.jpg", name: "ضرب و تقسیم تمرینی" },
+            { filename: "آموزش زمان و ساعت.jpg", name: "آموزش زمان و ساعت" },
+            { filename: "الفبای فارسی و انگلیسی.jpg", name: "الفبای فارسی و انگلیسی" },
+            { filename: "جدول جمع و تفریق.jpg", name: "جدول جمع و تفریق" },
+            /*{ filename: "جدول تناوبی عناصر.jpg", name: "جدول تناوبی عناصر" },
+            { filename: "اعداد همراه ساعت و محور.jpg", name: "اعداد همراه ساعت و محور" },
+            { filename: "جدول دوستی تمرینی.jpg", name: "جدول دوستی تمرینی" },
+            { filename: "آموزش ضرب و تقسیم.jpg", name: "آموزش ضرب و تقسیم" },
+            */
+        ]
+    },
+    4: {
+        name: "سایز ۷۰×۵۰ یکروچاپ",
+        price: 250000,
+        // آرایه مخصوص گروه ۴
+        allowedQuantities: [0, 20, 30, 50, 100, 200, 300, 400, 500], 
+        images: [
+            { filename: "الفبای فارسی شکل دار.jpg", name: "الفبای فارسی شکل دار" },
+            { filename: "جدول دوستی.jpg", name: "جدول دوستی" },
+            { filename: "الفبای فارسی بدون شکل.jpg", name: "الفبای فارسی بدون شکل" },
+            { filename: "جدول ضرب.jpg", name: "جدول ضرب" },
+            { filename: "جدول جمع.jpg", name: "جدول جمع" },
+            { filename: "اعداد 1 تا 100.jpg", name: "اعداد 1 تا 100" },
+            /*{ filename: "الفبای انگلیسی.jpg", name: "الفبای انگلیسی" },
+            { filename: "جدول تناوبی عناصر.jpg", name: "جدول تناوبی عناصر" },
+            { filename: "جدول تقسیم.jpg", name: "جدول تقسیم" },
+            { filename: "اعداد ده دهی.jpg", name: "اعداد ده دهی" },*/
+        ]
+    },
+    5: {
+        name: "سایز ۷۰×۵۰ یووی‌دار",
+        price: 350000,
+        // آرایه مخصوص گروه ۵
+        allowedQuantities: [0, 20, 30, 50, 100, 200, 300, 400, 500], 
+        images: [
+            { filename: "شهرک الفبا.jpg", name: "شهرک الفبا" },
+            { filename: "جدول دوستی تمرینی.jpg", name: "جدول دوستی تمرینی" },
+            { filename: "آناتـومی بـدن انسـان.jpg", name: "آناتـومی بـدن انسـان" },
+            { filename: "بـدن من.jpg", name: "بـدن من" },
+            { filename: "شکل صداها و الفبای فارسی.jpg", name: "شکل صداها و الفبای فارسی" },
+            { filename: "آموزش زمان وساعت.jpg", name: "آموزش زمان وساعت" },
+            { filename: "ضرب تمرینی ستونی.jpg", name: "ضرب تمرینی ستونی" },
+            { filename: "ضرب تمرینی مربعی.jpg", name: "ضرب تمرینی مربعی" },
+            { filename: "اعداد یک تا صد.jpg", name: "اعداد یک تا صد" },
+            { filename: "اعداد ده تا هزار.jpg", name: "اعداد ده تا هزار" },
+            { filename: "جدول تناوبی عناصر.jpg", name: "جدول تناوبی عناصر." },
+            { filename: "برنامه هفتگی.jpg", name: "برنامه هفتگی" },
+            { filename: "نقشـه ایـران.jpg", name: "نقشـه ایـران" },
+            { filename: "نقشـه جهـان.jpg", name: "نقشـه جهـان" },
+            /*{ filename: "منظومه خورشیدی.jpg", name: "منظومه خورشیدی" },
+            */
+        ]
+    },
+    6: {
+        name: "سایر محصولات",
+        type: "variable-count",
+        defaultQtyMultiplier: 60,
+        images: [
+            { filename: "دفترچه ای بزرگ ضرب.jpeg", name: "دفترچه ای بزرگ ضرب", price: 300000 },
+            { filename: "دفترچه ای کوچک ضرب.jpeg", name: "دفترچه ای کوچک ضرب", price: 250000 },
+            { filename: "دفترچه ای بزرگ الفبا.jpeg", name: "دفترچه ای بزرگ الفبا", price: 300000 },
+            { filename: "دفترچه ای کوچک الفبا.jpeg", name: "دفترچه ای کوچک الفبا", price: 250000 },
+            { filename: "دفترچه ای بزرگ دوستی.jpeg", name: "دفترچه ای بزرگ دوستی", price: 300000 },
+            { filename: "دفترچه ای کوچک دوستی.jpeg", name: "دفترچه ای کوچک دوستی", price: 250000 },
+            { filename: "فلش کارت اعداد.jpeg", name: "فلش کارت اعداد", price: 300000, qtyMultiplier: 60 },
+            { filename: "فلش کارت نگاره ها و نشانه ها.jpeg", name: "فلش کارت نگاره‌ها و نشانه‌ها", price: 300000, qtyMultiplier: 60 },
+            { filename: "استیکر A4.jpeg", name: "استیکر A4", price: 55000, qtyMultiplier: 100 },
+            /*
+            
+            { filename: "فلش کارت الفبا.jpeg", name: "فلش کارت الفبا", price: 220000 },
+            
+            */
+        ],
+    }
+};
+// آرایه سراسری allowedQuantities حذف شده است.
+let cart = new Map(JSON.parse(localStorage.getItem('cart') || '[]'));
+const MAX_QTY_OTHER_PRODUCTS = 480;
+
+const screens = {
+  main: document.getElementById('mainSection'),
+  gallery: document.getElementById('gallery'),
+  cart: document.getElementById('cartSection')
+};
+
+function showScreen(screenName) {
+  for (let key in screens) {
+    screens[key].style.display = 'none';
+  }
+  screens[screenName].style.display = 'flex';
+  
+  if (history.state === null || history.state.screen !== screenName) {
+    history.pushState({ screen: screenName }, '', `#${screenName}`);
+  }
+
+  if (screenName === 'gallery') {
+    const currentGroupId = document.getElementById('bottomGroupSelect').value;
+    loadGroup(currentGroupId);
+  } else if (screenName === 'cart') {
+    renderCartList();
+    loadCustomerInfo();
+  }
+  checkCartState();
+}
+
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.screen) {
+        for (let key in screens) {
+            screens[key].style.display = 'none';
+        }
+        screens[event.state.screen].style.display = 'flex';
+        if (event.state.screen === 'gallery') {
+            const currentGroupId = document.getElementById('bottomGroupSelect').value;
+            loadGroup(currentGroupId);
+        } else if (event.state.screen === 'cart') {
+            renderCartList();
+            loadCustomerInfo();
+        }
+        checkCartState();
+    } else {
+        showScreen('main');
+    }
+});
     
-    <div id="modal-container"></div>
+function showNotification(message) {
+    const container = document.getElementById('notification-container');
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    container.appendChild(notification);
+    void notification.offsetWidth;
+    notification.classList.add('show');
     
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const planetCards = document.querySelectorAll('.planet-card');
-            const modalContainer = document.getElementById('modal-container');
-            const solarSystemTitle = document.getElementById('solar-system-title');
-            
-            // --- Data for all objects (New objects added here) ---
-            const planetData = {
-                mercury: {
-                    name: 'عطارد',
-                    description: 'عطارد کوچکترین سیاره در منظومه خورشیدی و نزدیکترین سیاره به خورشید است. به دلیل نزدیکی به خورشید، دمای سطح آن نوسان زیادی دارد.'
-                },
-                venus: {
-                    name: 'زهره',
-                    description: 'زهره دومین سیاره از خورشید است و به دلیل جو غلیظ کربن دی‌اکسید خود، گرمترین سیاره منظومه خورشیدی است'
-                },
-                earth: {
-                    name: 'زمین',
-                    description: 'زمین تنها سیاره شناخته شده‌ای است که حیات در آن وجود دارد. این سیاره دارای یک قمر طبیعی به نام ماه است'
-                },
-                mars: {
-                    name: 'مریخ',
-                    description: 'مریخ به دلیل خاک قرمز رنگش، به سیاره سرخ معروف است. این سیاره دو قمر کوچک به نام‌های فوبوس و دیموس دارد'
-                },
-                jupiter: {
-                    name: 'مشتری',
-                    description: 'مشتری بزرگترین سیاره منظومه خورشیدی و یک غول گازی است. لکه سرخ بزرگ آن یک طوفان عظیم و پایدار است'
-                },
-                saturn: {
-                    name: 'زحل',
-                    description: 'زحل بیشتر به خاطر سیستم حلقه‌های خیره‌کننده‌اش شناخته می‌شود که از ذرات یخ و سنگ تشکیل شده‌اند'
-                },
-                uranus: {
-                    name: 'اورانوس',
-                    description: 'اورانوس یک غول یخی است که به صورت افقی به دور خورشید می‌چرخد. جو آن عمدتاً از هیدروژن و هلیوم تشکیل شده است'
-                },
-                // ... سایر اطلاعات قبلی
-neptune: {
-        name: 'نپتون',
-        description: 'نپتون دورترین سیاره شناخته شده از خورشید است. این سیاره نیز یک غول یخی است و بادهای بسیار شدیدی دارد'
-    },
-    // --- آیتم‌های جدید اضافه شده ---
-    dwarf_planets: {
-        name: 'سیارات کوتوله',
-        description: 'سیارات کوتوله مانند پلوتو و سرس، دارای جرمی کافی برای گرد شدن هستند اما نتوانسته‌اند مدار خود را از سایر اجرام پاکسازی کنند'
-    },
-    kuiper_belt: {
-        name: 'کمربند کویپر',
-        description: 'منطقه‌ای فراتر از مدار نپتون است که شامل هزاران جسم یخی کوچک، سیارات کوتوله (از جمله پلوتو) و بقایای تشکیل منظومه خورشیدی است'
-    },
-    stars_types: {
-        name: 'ستارگان و انواع آن‌ها',
-        description: 'ستارگان بر اساس اندازه، دما و درخشندگی به انواع مختلفی مانند کوتوله‌های سفید، غول‌های سرخ، ستاره‌های نوترونی و سیاه‌چاله‌ها تقسیم می‌شوند'
-    },
-    nebulae: {
-        name: 'سحابی‌ها',
-        description: 'ابرهای عظیمی از گاز و غبار در فضا هستند که اغلب به عنوان "مهد کودک ستارگان" شناخته می‌شوند، زیرا ستارگان جدید در آن‌ها متولد می‌شوند'
-    },
-    milky_way: {
-        name: 'کهکشان راه شیری',
-        description: 'کهکشان ما یک کهکشان مارپیچی میله‌ای با قطر تقریبی ۱۰۰ هزار سال نوری است که شامل ۲۰۰ تا ۴۰۰ میلیارد ستاره (از جمله خورشید) است'
-    },
-    space_history: {
-        name: 'تاریخچه اکتشافات فضایی',
-        description: 'مروری بر رویدادهای مهم مانند ارسال اولین ماهواره (اسپوتنیک ۱)، اولین انسان در فضا (یوری گاگارین) و مأموریت‌های آپولو که منجر به فرود بر ماه شد'
-    },
-// ... سایر اطلاعات قبلی
-                // --- New Space Objects for the Menu ---
-                solar_system_main: {
-                    name: 'منظومه خورشیدی',
-                    description: "<p>منظومه خورشیدی ما شامل خورشید، هشت سیاره اصلی، سیارات کوتوله، قمرها، سیارک‌ها و دنباله‌دارها است<p> این منظومه در کهکشان راه شیری قرار دارد.منظومهٔ شمسی دارای هشت سیاره (تیر یا عطارد، ناهید یا زهره، زمین، بهرام یا مریخ، هرمز یا مشتری، کیوان یا زحل، اورانوس و نپتون) و پنج سیارهٔ کوتولهٔ تاکنون شناخته‌شده (سرس، پلوتون، هاومیا، ماکی‌ماکی و اریس) است. چهار سیارهٔ نخست، سیاره‌های درونی یا زمین‌سان هستند و بیشتر از سنگ ساخته شده‌اند. از چهار سیارهٔ دیگر یا سیاره‌های بیرونی، مشتری و زحل غول‌های گازی هستند و بیشتر از گازهای هیدروژن و هلیوم ساخته شده‌اند و اورانوس و نپتون غول‌های یخی هستند. افزون‌بر این اجرام، منظومهٔ شمسی دربرگیرندهٔ اجرام دیگری از جمله قمرها، سیارک‌ها، شهاب‌واره‌ها، شهاب‌ها، شهاب‌سنگ‌ها و دنباله‌دارهاست. سامانهٔ خورشیدی همچنین دارای مناطق خاصی از جمله کمربند سیارک‌ها، کمربند کویپر و دیسک پراکنده (سامانه خورشیدی) است.حدود ۴٫۶ میلیارد سال پیش، هنگامی که یک ابر گازی و گرد و غباری در فضا آشفته بود، منظومهٔ شمسی در اثر انفجار یک ابرنواختر شکل‌گرفت. انفجار این ابرنواختر امواجی در فضا ساخت که ابر گازی و گرد و غباری را تحت فشار قرار داد. فشردن ابر موجب فروریزش آن شد، به‌طوری‌که گرانش، گاز و گرد و غبار را به هم چسباند و یک سحابی خورشیدی شکل‌گرفت. ابر شروع به چرخیدن کرد و سرانجام فرو ریخت. سپس مرکز ابر داغ‌تر و چگالتر از بقیهٔ آن شد و دیسک گازی و گرد و غباری شکل گرفت که مرکز آن داغ و لبه‌های آن سرد بود. دیسک نازک‌تر و نازک‌تر شد و ذرات با هم توده‌هایی ساختند. با چسبیدن توده‌های کوچک به هم، برخی توده‌های بزرگ ساخته‌شدند و سیاره‌ها و قمرها پدید آمدند. مواد یخی مناطق بیرونی دیسک و مواد سنگی سیارات غول‌پیکری مانند مشتری (برجیس) را پدیدآوردند. سرانجام مرکز ابر به اندازه‌ای گرم شد که تبدیل به ستاره‌ای به نام خورشید شد<p>"
-                },
-                sun: {
-                    name: 'خورشید',
-                    description: "<p>خورشید ستاره‌ای در مرکز منظومه شمسی است. این ستاره، تقریباً کروی است و از پلاسمای داغ تشکیل شده که توسط نیروی گرانش در کنار هم نگه داشته شده است. خورشید منبع اصلی نور و گرما برای زندگی روی زمین است. قطر آن حدود ۱٫۳۹ میلیون کیلومتر (۱۰۹ برابر زمین) است</p><p>خورشید حدود ۴٫۶ میلیارد سال پیش از فروپاشی گرانشی ناحیه‌ای بزرگ در یک ابر مولکولی تشکیل شد</p><p>دما در هسته خورشید به حدود ۱۵ میلیون درجه سانتیگراد می‌رسد</p><p>یکی از پدیده‌های جالب خورشید، باد خورشیدی است که جریانی از ذرات باردار است و در سراسر منظومه شمسی پخش می‌شود</p>" 
-                    
-                },
-                moon: {
-                    name: 'ماه',
-                    description: 'ماه تنها قمر طبیعی و دائمی زمین است و پنجمین قمر بزرگ در منظومه خورشیدی محسوب می‌شود. فاقد جو است و سطح آن پوشیده از دهانه‌های برخوردی است'
-                },
-                meteoroid: {
-                    name: 'شهاب سنگ‌ها',
-                    description: 'قطعات کوچکی از سنگ یا فلز در فضا هستند. وقتی وارد جو زمین می‌شوند به نام "شهاب" یا "ستاره دنباله‌دار" شناخته می‌شوند و اگر به سطح زمین برسند "شهاب سنگ" نامیده می‌شوند'
-                },
-                comet: {
-                    name: 'دنباله‌دارها',
-                    description: 'اجرام یخی کوچکی هستند که با نزدیک شدن به خورشید بر اثر تابش آن، گاز و غبار ساطع می‌کنند و دو دنباله درخشان (غبار و پلاسما) ایجاد می‌کنند'
-                },
-                asteroid_belt: {
-                    name: 'کمربند سیارکی',
-                    description: 'ناحیه‌ای به شکل دونات بین مدارهای مریخ و مشتری است که محل تجمع میلیون‌ها سیارک با اندازه‌ها و شکل‌های نامنظم است'
-                },
-                black_hole: {
-                    name: 'سیاه چاله‌ها',
-                    description: 'مناطقی در فضا-زمان هستند که نیروی گرانش در آن‌ها آنقدر زیاد است که هیچ چیز، حتی نور، نمی‌تواند از افق رویداد آن فرار کند'
-                },
-                satellite: {
-                    name: 'ماهواره‌ها',
-                    description: 'اجسام ساخت دست بشر یا طبیعی که به دور یک سیاره بزرگتر می‌چرخند. ماهواره‌های مصنوعی برای ارتباطات، ناوبری و تحقیقات علمی استفاده می‌شوند.'
-                },
-                spacecraft: {
-                    name: 'سفینه فضایی',
-                    description: 'وسیله‌ای که برای سفر در فضا و انجام ماموریت‌های فضایی طراحی شده است. می‌توانند ربوتیک (مانند وویجر) یا سرنشین‌دار (مانند آپولو) باشند'
-                },
-                space_station: {
-                    name: 'ایستگاه فضایی',
-                    description: "<p>یک سازه بزرگ در مدار زمین است که برای اقامت طولانی مدت فضانوردان ، انجام آزمایش‌ها و تحقیقات علمی طراحی شده است </p><p>مانند ایستگاه فضایی بین‌المللی</p></p>ISS<p>"
-                }
-            };
-            
-            function showModal(title, description) {
-                modalContainer.innerHTML = `
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2>${title}</h2>
-                            <button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>${description}</p>
-                        </div>
-                    </div>
-                `;
-                modalContainer.style.display = 'flex';
-                
-                document.querySelector('.close-button').addEventListener('click', () => {
-                    modalContainer.style.display = 'none';
-                });
-            }
-            
-            // Event listener for the main title (still active)
-            if (solarSystemTitle) {
-                solarSystemTitle.addEventListener('click', () => {
-                    const data = planetData['solar_system_main'];
-                    showModal(data.name, data.description);
-                });
-            }
-            
-            // Event listeners for planet cards at the bottom
-            planetCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const planetKey = card.dataset.planet;
-                    const data = planetData[planetKey];
-                    
-                    if (data) {
-                        showModal(data.name, data.description);
-                    }
-                });
-            });
-            
-            // --- New Logic for Hamburger Menu ---
-            const hamburgerBtn = document.getElementById('hamburger-btn');
-            const sideMenu = document.getElementById('side-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const sideMenuLinks = document.querySelectorAll('#side-menu ul li');
+    setTimeout(() => {
+        notification.classList.remove('show');
+        notification.classList.add('hide');
+        setTimeout(() => {
+            notification.remove();
+        }, 500);
+    }, 4000);
+}
 
-            // Toggle menu visibility
-            if (hamburgerBtn) {
-                hamburgerBtn.addEventListener('click', () => {
-                    sideMenu.classList.toggle('open');
-                });
-            }
+// ** اضافه کردن تابع جدید برای نمایش پیام خوش‌آمدگویی **
+function showWelcomeNotification(message) {
+    showNotification(message);
+}
+// ** تابع جدید برای گرد کردن به نزدیکترین مقدار مجاز غیرصفر (حل مشکل شما) **
+function findNearestAllowedQuantity(previousQuantity, allowedQuantities) {
+    // ... منطق گرد کردن ...
+}
+// ** تابع generateQuantityOptions تغییر یافته برای پشتیبانی از آرایه مخصوص هر گروه **
+function generateQuantityOptions(selectedQty, qtyMultiplier = 1, isOtherProductsGroup = false, groupAllowedQuantities = null) {
+    let optionsHtml = '';
+    const maxQtyForOtherProducts = MAX_QTY_OTHER_PRODUCTS;
 
-            // Close menu button
-            if (closeMenuBtn) {
-                closeMenuBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    sideMenu.classList.remove('open');
-                });
-            }
-
-            // Event listener for menu items
-            sideMenuLinks.forEach(item => {
-                item.addEventListener('click', () => {
-                    const dataKey = item.dataset.planet;
-                    const data = planetData[dataKey];
-                    
-                    if (data) {
-                        showModal(data.name, data.description);
-                        sideMenu.classList.remove('open'); // Close menu after selection
-                    }
-                });
-            });
-            // --- End New Logic for Hamburger Menu ---
-            
-            modalContainer.addEventListener('click', (e) => {
-                if (e.target.id === 'modal-container') {
-                    modalContainer.style.display = 'none';
-                }
-            });
-            
-            const headerLogo = document.querySelector('.header-logo');
-            if (headerLogo) {
-                headerLogo.addEventListener('click', () => {
-                    headerLogo.classList.toggle('enlarged');
-                });
-            }
+    // منطق جدید: استفاده از آرایه مجاز گروهی (برای گروه‌های ۱ تا ۵)
+    if (groupAllowedQuantities && !isOtherProductsGroup && qtyMultiplier === 1) {
+        groupAllowedQuantities.forEach(qty => { 
+            optionsHtml += `<option value="${qty}" ${qty === selectedQty ? 'selected' : ''}>${qty}</option>`;
         });
-    </script>
-    <footer style="text-align: center; margin-top: 10px; color: white;">
-        <p>All rights reserved for Poster Iran © 2025</p>
-    </footer>
+        return optionsHtml; // پایان تابع در این حالت
+    }
+    
+    // منطق قبلی برای گروه‌های با تعداد متغیر (مانند گروه ۶) یا گروه‌هایی با qtyMultiplier > 1
+    if (isOtherProductsGroup) {
+        optionsHtml += `<option value="0" ${selectedQty === 0 ? 'selected' : ''}>0</option>`;
+        for (let i = qtyMultiplier; i <= maxQtyForOtherProducts; i += qtyMultiplier) {
+            optionsHtml += `<option value="${i}" ${i === selectedQty ? 'selected' : ''}>${i}</option>`;
+        }
+    } else if (qtyMultiplier > 1) {
+        optionsHtml += `<option value="0" ${selectedQty === 0 ? 'selected' : ''}>0</option>`;
+        for (let i = qtyMultiplier; i <= 5000; i += qtyMultiplier) {
+            optionsHtml += `<option value="${i}" ${i === selectedQty ? 'selected' : ''}>${i}</option>`;
+        }
+    } 
+    // بخش else که از allowedQuantities سراسری استفاده می‌کرد حذف شده است.
+    
+    return optionsHtml;
+}
+
+function loadGroup(groupId) {
+    const container = document.getElementById("imagesContainer");
+
+    const info = groupInfo[groupId];
+    if (!info) {
+        console.error(`Group with ID ${groupId} not found. Cannot load images.`);
+        container.innerHTML = "";
+        return;
+    }
+
+    container.innerHTML = `<h2>${info.name}</h2>
+                           <div class="image-container-inner"></div>`;
+    const imagesContainerInner = document.querySelector(".image-container-inner");
+    
+    // ** خط جدید **: دریافت آرایه مقادیر مجاز گروه
+    const groupAllowedQuantities = info.allowedQuantities || null; 
+    
+    const isVariableCountGroup = info.type === 'variable-count';
+    const isOtherProductsGroup = (groupId === '6');
+
+    info.images.forEach(item => {
+        const itemPrice = item.price || info.price;
+        const filename = item.filename;
+        const itemName = item.name;
+        const imagePath = `Image/${info.name}/${filename}`;
+        const itemUniqueId = `${groupId}-${filename}`;
+        const currentCartItem = cart.has(itemUniqueId) ? cart.get(itemUniqueId) : null;
+        const initialQty = currentCartItem ? currentCartItem.qty : 0;
+        const qtyMultiplier = isVariableCountGroup ? (item.qtyMultiplier || info.defaultQtyMultiplier || 1) : 1;
+        
+        const box = document.createElement("div");
+        box.className = "image-box";
+        box.innerHTML = `
+            <img src="${imagePath}" alt="${itemName}" onclick="openImageModal('${imagePath}')">
+            <p style="font-weight: bold; margin-bottom: 5px;">${itemName}</p>
+            <p style="color: #4CAF50; font-weight: bold;">قیمت: ${itemPrice.toLocaleString()} ریال</p>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px; justify-content: center;">
+                <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <label for="qty-select-${itemUniqueId}">تعداد :</label>
+                    <select id="qty-select-${itemUniqueId}" class="quantity-select">
+                        ${generateQuantityOptions(initialQty, qtyMultiplier, isOtherProductsGroup, groupAllowedQuantities)}
+                    </select>
+                </div>
+                <p id="in-cart-display-${itemUniqueId}" class="in-cart-display" style="margin-top: 5px;">موجود در سبد: ${initialQty} عدد</p>
+            </div>
+        `;
+        imagesContainerInner.appendChild(box);
+    });
+    
+    // Attach event listeners to newly created selects
+    info.images.forEach(item => {
+        const itemUniqueId = `${groupId}-${item.filename}`;
+        const qtySelect = document.getElementById(`qty-select-${itemUniqueId}`);
+        if (qtySelect) {
+            qtySelect.addEventListener('change', () => addToCart(groupId, item.filename));
+        }
+    });
+
+    document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function addToCart(groupId, filename) {
+    const info = groupInfo[groupId];
+    const itemUniqueId = `${groupId}-${filename}`;
+    
+    const isVariableCountGroup = info.type === 'variable-count';
+    const isOtherProductsGroup = (parseInt(groupId) === 6);
+    
+    const qtySelect = document.getElementById(`qty-select-${itemUniqueId}`);
+    let selectedQty = parseInt(qtySelect.value);
+    
+    // Find the specific item in the group
+    const itemInGroup = info.images.find(img => img.filename === filename);
+    if (!itemInGroup) {
+        console.error(`Item with filename ${filename} not found in group ${groupId}.`);
+        return;
+    }
+    
+    // Determine the price based on whether the item has its own price or uses the group price
+    const itemPrice = itemInGroup.price || info.price;
+    
+    const qtyMultiplier = isVariableCountGroup ? (itemInGroup.qtyMultiplier || info.defaultQtyMultiplier) : 1;
+    
+    if (isNaN(selectedQty) || selectedQty < 0) {
+        showNotification("لطفا تعداد معتبری را انتخاب کنید.");
+        selectedQty = cart.has(itemUniqueId) ? cart.get(itemUniqueId).qty : 0;
+        qtySelect.value = selectedQty;
+        return;
+    }
+    
+    if (isVariableCountGroup && (selectedQty % qtyMultiplier !== 0)) {
+        showNotification(`برای این محصول، تعداد باید مضربی از ${qtyMultiplier} باشد.`);
+        qtySelect.value = cart.has(itemUniqueId) ? cart.get(itemUniqueId).qty : 0;
+        return;
+    }
+    
+    if (isOtherProductsGroup && selectedQty > MAX_QTY_OTHER_PRODUCTS) {
+        showNotification(`حداکثر تعداد مجاز برای محصولات گروه "سایر محصولات" ${MAX_QTY_OTHER_PRODUCTS} عدد است.`);
+        selectedQty = MAX_QTY_OTHER_PRODUCTS;
+        qtySelect.value = selectedQty;
+    }
+    
+    const previousQty = cart.has(itemUniqueId) ? cart.get(itemUniqueId).qty : 0;
+    
+    if (selectedQty === 0) {
+        if (cart.has(itemUniqueId)) {
+            removeFromCart(itemUniqueId, false);
+        }
+    } else {
+        cart.set(itemUniqueId, {
+            groupId: groupId,
+            filename: filename,
+            groupName: info.name,
+            name: itemInGroup.name,
+            price: itemPrice, // Correctly assigns the price at the time of adding
+            qty: selectedQty
+        });
+        saveCart();
+        
+        if (selectedQty > previousQty) {
+            showNotification(`${itemInGroup.name} تعداد ${selectedQty} عدد به سبد خرید اضافه شد.`);
+        } else if (selectedQty < previousQty) {
+            showNotification(`تعداد ${itemInGroup.name} در سبد خرید به ${selectedQty} عدد کاهش یافت.`);
+        } else {
+            showNotification(`تعداد ${itemInGroup.name} در سبد خرید تغییری نکرد و ${selectedQty} عدد باقی ماند.`);
+        }
+    }
+    
+    let inCartDisplayElement = document.getElementById(`in-cart-display-${itemUniqueId}`);
+    
+    if (inCartDisplayElement) {
+        inCartDisplayElement.textContent = `موجود در سبد: ${selectedQty} عدد`;
+    }
+    checkCartState();
+}
+
+function updateCartItemQuantityFromDropdown(selectElement, itemUniqueId) {
+    const [groupId, filename] = itemUniqueId.split('-');
+    const info = groupInfo[groupId];
+    const isVariableCountGroup = info.type === 'variable-count';
+    const isOtherProductsGroup = (parseInt(groupId) === 6);
+    let itemInGroup;
+    if (isVariableCountGroup) {
+      itemInGroup = info.images.find(img => img.filename === filename);
+    } else {
+      itemInGroup = info.images.find(img => img.filename === filename);
+    }
+
+    let newQty = parseInt(selectElement.value);
+
+    if (isNaN(newQty) || newQty < 0) {
+        console.error("Invalid quantity selected from dropdown.");
+        renderCartList();
+        return;
+    }
+    
+    if (isOtherProductsGroup && newQty > MAX_QTY_OTHER_PRODUCTS) {
+        showNotification(`حداکثر تعداد مجاز برای محصولات گروه "سایر محصولات" ${MAX_QTY_OTHER_PRODUCTS} عدد است.`);
+        newQty = MAX_QTY_OTHER_PRODUCTS;
+        selectElement.value = newQty;
+    }
+    
+    if (newQty === 0) {
+        const itemToRemove = cart.get(itemUniqueId);
+        if (itemToRemove) {
+            removeFromCart(itemUniqueId, false);
+        }
+    } else {
+        let item = cart.get(itemUniqueId);
+        item.qty = newQty;
+        cart.set(itemUniqueId, item);
+        saveCart();
+        renderCartList();
+        showNotification(`تعداد ${itemInGroup.name} در سبد خرید به ${newQty} عدد تغییر یافت.`);
+    }
+    checkCartState();
+}
+
+function removeFromCart(itemUniqueId, showConfirm = true) {
+    const itemToRemove = cart.get(itemUniqueId);
+    if (!itemToRemove) return;
+
+    if (showConfirm && !confirm('آیا مطمئنید می‌خواهید این محصول را از سبد حذف کنید؟')) {
+        return;
+    }
+
+    cart.delete(itemUniqueId);
+    saveCart();
+    renderCartList();
+    showNotification(`${itemToRemove.name} از سبد خرید حذف شد.`);
+
+    if (document.getElementById('gallery').style.display === 'flex') {
+        const qtySelectInGallery = document.getElementById(`qty-select-${itemUniqueId}`);
+        if (qtySelectInGallery) {
+            qtySelectInGallery.value = 0;
+            const inCartDisplayElement = document.getElementById(`in-cart-display-${itemUniqueId}`);
+            if (inCartDisplayElement) {
+                inCartDisplayElement.textContent = `موجود در سبد: 0 عدد`;
+            }
+        }
+    }
+    checkCartState();
+}
+
+function clearCart() {
+    if (confirm('آیا مطمئنید می‌خواهید کل سبد خرید را پاک کنید؟')) {
+        cart.clear();
+        saveCart();
+        renderCartList();
+        showNotification('سبد خرید شما پاک شد.');
+        if (document.getElementById('gallery').style.display === 'flex') {
+            loadGroup(document.getElementById('bottomGroupSelect').value);
+        }
+        checkCartState();
+    }
+}
+
+function calculateDiscountPercentage(totalAmount) {
+    if (totalAmount >= 1000000000) return 0.09;
+    else if (totalAmount >= 900000000) return 0.05;
+    else if (totalAmount >= 800000000) return 0.05;
+    else if (totalAmount >= 700000000) return 0.05;
+    else if (totalAmount >= 600000000) return 0.05;
+    else if (totalAmount >= 500000000) return 0.05;
+    else if (totalAmount >= 400000000) return 0.00;
+    else if (totalAmount >= 300000000) return 0.00;
+    else if (totalAmount >= 200000000) return 0.00;
+    else return 0;
+}
+
+function renderCartList() {
+    const list = document.getElementById("cartList");
+    const totalDisplay = document.getElementById("totalPrice");
+    list.innerHTML = "";
+    let grouped = {};
+    let groupedSummaries = {};
+    let totalSumBeforeDiscount = 0;
+
+    if (cart.size === 0) {
+        list.innerHTML = "<p>سبد خرید شما خالی است.</p>";
+        totalDisplay.textContent = `مبلغ کل: 0 ریال`;
+        return;
+    }
+
+    cart.forEach(item => {
+        // --- START OF FIX: بازیابی قیمت لحظه‌ای از منبع (groupInfo) ---
+        const group = groupInfo[item.groupId];
+        if (!group) return; 
+
+        const itemDetail = group.images.find(img => img.filename === item.filename);
+        const actualPrice = (group.type === 'variable-count' && itemDetail && itemDetail.price) 
+                            ? itemDetail.price 
+                            : group.price;
+        // --- END OF FIX ---
+
+        if (!grouped[item.groupName]) grouped[item.groupName] = [];
+        // استفاده از actualPrice برای نمایش و محاسبات
+        grouped[item.groupName].push({ ...item, price: actualPrice }); 
+        
+        // استفاده از actualPrice برای محاسبه مبلغ کل قبل از تخفیف
+        totalSumBeforeDiscount += item.qty * actualPrice;
+
+        if (!groupedSummaries[item.groupName]) {
+            groupedSummaries[item.groupName] = {
+                totalQty: 0,
+                totalPrice: 0
+            };
+        }
+        groupedSummaries[item.groupName].totalQty += item.qty;
+        // استفاده از actualPrice برای محاسبه مبلغ خلاصه گروه
+        groupedSummaries[item.groupName].totalPrice += item.qty * actualPrice;
+    });
+
+    for (let groupName in grouped) {
+    list.innerHTML += `<h4 style="margin-top: 45px; margin-bottom: 0px; text-align: right; border-bottom: 1px dashed #eee; padding-bottom: 5px; color: #4CAF50;">${groupName}</h4>`;
+    grouped[groupName].forEach(item => {
+                const itemUniqueId = `${item.groupId}-${item.filename}`;
+            
+            const group = groupInfo[item.groupId]; 
+            let itemDetail = null;
+            if (group.type === 'variable-count') {
+                itemDetail = group.images.find(img => img.filename === item.filename);
+            }
+            const qtyMultiplierForCartItem = itemDetail ? (itemDetail.qtyMultiplier || group.defaultQtyMultiplier || 1) : 1; 
+            const isOtherProductsGroup = (parseInt(item.groupId) === 6);
+            
+            // ** خط جدید **: دریافت آرایه مقادیر مجاز گروه برای سبد خرید
+            const groupAllowedQuantitiesForCart = group.allowedQuantities || null;
+
+            const itemDiv = document.createElement("div");
+            itemDiv.className = "cart-item";
+            itemDiv.innerHTML = `
+                <div class="cart-item-info">
+                    <p style="font-weight: bold; margin-bottom: 3px;"> ${item.name}</p>
+                </div>
+                <div class="quantity-control">
+                    <select id="cart-qty-select-${itemUniqueId}" class="quantity-select"
+                                onchange="updateCartItemQuantityFromDropdown(this, '${itemUniqueId}')">
+                            ${generateQuantityOptions(item.qty, qtyMultiplierForCartItem, isOtherProductsGroup, groupAllowedQuantitiesForCart)} </select>
+                   
+                </div>
+            `;
+            list.appendChild(itemDiv);
+        });
+    }
+
+    list.innerHTML += `<h3 style="margin-top: 30px; border-bottom: 2px solid #00C853; padding-bottom: 10px; color: #00C853; text-align: right;">خلاصه سفارش بر اساس گروه:</h3>`;
+    for (let groupName in groupedSummaries) {
+        const summary = groupedSummaries[groupName];
+        list.innerHTML += `
+            <div style="background-color: #e8f5e9; padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right;">
+                <p style="font-weight: bold; margin: 0;">${groupName}:</p>
+                <p style="margin: 0; font-size: 0.9em;">تعداد کل: ${summary.totalQty} عدد - مجموع قیمت: ${summary.totalPrice.toLocaleString()} ریال</p>
+            </div>
+        `;
+    }
+    list.innerHTML += `<hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">`;
+
+    list.innerHTML += `
+        <div style="padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right; background-color: #ffe0b2;">
+            <p style="font-weight: bold; margin: 0;">مبلغ کل : ${totalSumBeforeDiscount.toLocaleString()} ریال</p>
+        </div>
+    `;
+
+    const discountRate = calculateDiscountPercentage(totalSumBeforeDiscount);
+    const discountAmount = totalSumBeforeDiscount * discountRate;
+    let totalSumAfterDiscount = totalSumBeforeDiscount - discountAmount;
+
+    if (discountAmount > 0) {
+        list.innerHTML += `
+            <div style="padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right; background-color: #ffe0b2;">
+                <p style="font-weight: bold; margin: 0; color: #e65100;">🎁 تخفیف (${discountAmount.toLocaleString()} ریال)</p>
+                <p style="margin: 0; font-size: 0.9em;">مبلغ پس از تخفیف: ${totalSumAfterDiscount.toLocaleString()} ریال</p>
+            </div>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px dashed #ccc;">
+        `;
+    }
+
+    const baseShippingThreshold = 120000000; 
+    const costPerThreshold = 600000;     
+    let calculatedShippingCost = 0;
+    let shippingDisplayMessage = "";
+    
+    if (totalSumAfterDiscount === 0) {
+        calculatedShippingCost = 0;
+        shippingDisplayMessage = `\n🚚 هزینه باربری: 0 ریال`;
+    } else {
+        const numberOfThresholds = Math.ceil(totalSumAfterDiscount / baseShippingThreshold);
+        calculatedShippingCost = numberOfThresholds * costPerThreshold;
+        shippingDisplayMessage = `\n🚚 هزینه‌باربری‌(‌${numberOfThresholds} بسته) : ${calculatedShippingCost.toLocaleString()} ریال `;
+    }
+
+    const finalTotalWithShipping = totalSumAfterDiscount + calculatedShippingCost;
+    
+
+    list.innerHTML += `
+        <div style="padding: 8px; margin-bottom: 5px; border-radius: 5px; text-align: right; background-color: #ffe0b2;">
+            <p style="font-weight: bold; margin: 0; color: #512DA8;">${shippingDisplayMessage.trim()}</p>
+        </div>
+    `;
+    
+    totalDisplay.textContent = `💰 مبلغ قابل پرداخت : ${finalTotalWithShipping.toLocaleString()} ریال`;
+    checkCartState();
+}
+
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(Array.from(cart.entries())));
+}
+
+const orderPhoneNumber = "989010195885";
+
+function validateCustomerInfo() {
+    const customerName = document.getElementById('customerName').value.trim();
+    const customerPhone = document.getElementById('customerPhone').value.trim();
+    const customerAddress = document.getElementById('customerAddress').value.trim();
+
+    if (!customerName || !customerPhone || !customerAddress) {
+        showNotification('لطفاً نام و نام خانوادگی، شماره موبایل و آدرس کامل تحویل را وارد کنید.');
+        return false;
+    }
+    
+    localStorage.setItem('customerName', customerName);
+    localStorage.setItem('customerPhone', customerPhone);
+    localStorage.setItem('customerAddress', customerAddress);
+    return true;
+}
+
+function saveOrderToHistory(orderId) {
+    const currentCartArray = Array.from(cart.values());
+    if (currentCartArray.length === 0) return;
+
+    let ordersHistory = JSON.parse(localStorage.getItem('previousOrders') || '[]');
+
+    // --- FIX APPLIED HERE: Recalculate based on current prices (implicitly done through generateOrderMessage's logic, but for history we need explicit calculation)
+    let totalAmountBeforeDiscount = 0;
+    currentCartArray.forEach(item => {
+        const group = groupInfo[item.groupId];
+        if (!group) return; 
+
+        const itemDetail = group.images.find(img => img.filename === item.filename);
+        const actualPrice = (group.type === 'variable-count' && itemDetail && itemDetail.price) 
+                            ? itemDetail.price 
+                            : group.price;
+        totalAmountBeforeDiscount += item.qty * actualPrice; 
+    });
+    // --- END OF FIX for History Saving ---
+
+
+    const discountRate = calculateDiscountPercentage(totalAmountBeforeDiscount);
+    const discountAmount = totalAmountBeforeDiscount * discountRate;
+    const totalAmountAfterDiscount = totalAmountBeforeDiscount - discountAmount;
+    
+    const baseShippingThreshold = 120000000;
+    const costPerThreshold = 600000;
+    let calculatedShippingCost = 0;
+    if (totalAmountAfterDiscount > 0) {
+        const numberOfThresholds = Math.ceil(totalAmountAfterDiscount / baseShippingThreshold);
+        calculatedShippingCost = numberOfThresholds * costPerThreshold;
+    }
+
+    const finalTotalAmount = totalAmountAfterDiscount + calculatedShippingCost;
+
+    const newOrder = {
+        id: orderId,
+        date: new Date().toLocaleString('fa-IR'),
+        items: currentCartArray,
+        totalPrice: finalTotalAmount,
+        totalPriceBeforeDiscount: totalAmountBeforeDiscount,
+        discount: discountAmount,
+        shipping: calculatedShippingCost,
+        customerInfo: {
+            name: document.getElementById('customerName').value,
+            phone: document.getElementById('customerPhone').value,
+            address: document.getElementById('customerAddress').value
+        }
+    };
+    ordersHistory.push(newOrder);
+    localStorage.setItem('previousOrders', JSON.stringify(ordersHistory));
+}
+
+function generateOrderMessage(orderId) {
+    const orderDate = new Date().toLocaleString('fa-IR');
+    let message = `🗓️ تاریخ: ${orderDate}\n`;
+    message += `🛍️ سفارش من - شماره سفارش: ${orderId}\n`;
+    const customerName = document.getElementById('customerName').value.trim();
+    const customerPhone = document.getElementById('customerPhone').value.trim();
+    const customerAddress = document.getElementById('customerAddress').value.trim();
+    
+    message += `📍 آدرس تحویل: ${customerAddress}\n`;
+    message += `\n👤 نام و نام خانوادگی: ${customerName}\n`;
+    message += `📱 شماره موبایل: ${customerPhone}\n`;
+    
+    let totalAmountBeforeDiscount = 0;
+    let groupedItems = {};
+    let groupedSummaries = {};
+
+    cart.forEach(item => {
+        // --- START OF FIX: بازیابی قیمت لحظه‌ای از منبع (groupInfo) ---
+        const group = groupInfo[item.groupId];
+        if (!group) return; 
+
+        const itemDetail = group.images.find(img => img.filename === item.filename);
+        const actualPrice = (group.type === 'variable-count' && itemDetail && itemDetail.price) 
+                            ? itemDetail.price 
+                            : group.price;
+        // --- END OF FIX ---
+        
+        if (!groupedItems[item.groupName]) groupedItems[item.groupName] = [];
+        groupedItems[item.groupName].push(item);
+        
+        // استفاده از actualPrice برای محاسبه مبلغ کل قبل از تخفیف
+        totalAmountBeforeDiscount += item.qty * actualPrice;
+        
+        if (!groupedSummaries[item.groupName]) {
+            groupedSummaries[item.groupName] = { totalQty: 0, totalPrice: 0 };
+        }
+        groupedSummaries[item.groupName].totalQty += item.qty;
+        // استفاده از actualPrice برای محاسبه مبلغ خلاصه گروه
+        groupedSummaries[item.groupName].totalPrice += item.qty * actualPrice;
+    });
+
+    message += "\n🔆🔅 جزئیات سفارش\n";
+    for (let groupName in groupedItems) {
+        message += `\n• ${groupName} :\n`;
+        groupedItems[groupName].forEach(item => {
+            message += `  - ${item.name} - تعداد: ${item.qty} عدد\n`;
+        });
+    }
+    
+    message += "               ---------------------------------------\n";
+    message += "\n🔶🔸 خلاصه سفارش بر اساس گروه\n";
+    for (let groupName in groupedSummaries) {
+        const summary = groupedSummaries[groupName];
+        message += `* ${groupName}: تعداد کل ${summary.totalQty} عدد - مجموع قیمت: ${summary.totalPrice.toLocaleString()} ریال\n`;
+    }
+    message += "               ---------------------------------------\n";
+
+    const discountRate = calculateDiscountPercentage(totalAmountBeforeDiscount);
+    const discountAmount = totalAmountBeforeDiscount * discountRate;
+    const totalAmountAfterDiscount = totalAmountBeforeDiscount - discountAmount;
+
+    message += `\n💵 مبلغ کل : ${totalAmountBeforeDiscount.toLocaleString()} ریال`;
+    if (discountAmount > 0) {
+        message += `\n🎁 تخفیف : ${discountAmount.toLocaleString()} ریال`;
+        message += `\n💵 مبلغ پس از تخفیف: ${totalAmountAfterDiscount.toLocaleString()} ریال`;
+    }
+
+    const baseShippingThreshold = 120000000;
+    const costPerThreshold = 600000;
+    let calculatedShippingCost = 0;
+    let shippingMessage = "";
+    
+    if (totalAmountAfterDiscount === 0) {
+        calculatedShippingCost = 0;
+        shippingMessage = "\n🚚 هزینه باربری: 0 ریال";
+    } else {
+        const numberOfThresholds = Math.ceil(totalAmountAfterDiscount / baseShippingThreshold);
+        calculatedShippingCost = numberOfThresholds * costPerThreshold;
+        shippingMessage = `\n🚚 هزینه‌باربری‌(‌${numberOfThresholds} بسته) : ${calculatedShippingCost.toLocaleString()} ریال `;
+    }
+
+    const finalTotalAmountWithShipping = totalAmountAfterDiscount + calculatedShippingCost;
+
+    message += shippingMessage;
+    message += `\n💰 مبلغ نهایی قابل پرداخت: ${finalTotalAmountWithShipping.toLocaleString()} ریال`;
+    message += `\n\n✅  سفارش شما با موفقیت ثبت شد . در اسرع وقت سفارش شما بررسی و هماهنگی لازم با شما صورت می‌گیرد.`;
+    return message;
+}
+
+
+function submitOrderWithWhatsApp() {
+    if (cart.size === 0) {
+        showNotification('سبد خرید شما خالی است.');
+        return;
+    }
+    if (!validateCustomerInfo()) {
+        return;
+    }
+    
+    const orderId = Date.now().toString().slice(-4);
+    saveOrderToHistory(orderId);
+    const message = generateOrderMessage(orderId);
+    const whatsappUrl = `https://wa.me/${orderPhoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+
+    cart.clear();
+    saveCart();
+    renderCartList();
+    showNotification('سفارش شما ثبت و سبد خرید پاک شد.');
+    if (document.getElementById('gallery').style.display === 'flex') {
+        loadGroup(document.getElementById('bottomGroupSelect').value);
+    }
+}
+
+function loadCustomerInfo() {
+    const customerName = localStorage.getItem('customerName');
+    const customerPhone = localStorage.getItem('customerPhone');
+    const customerAddress = localStorage.getItem('customerAddress');
+    
+    if (customerName) document.getElementById('customerName').value = customerName;
+    if (customerPhone) document.getElementById('customerPhone').value = customerPhone;
+    if (customerAddress) document.getElementById('customerAddress').value = customerAddress;
+}
+
+// Image Modal Functions
+function openImageModal(imageSrc) {
+	const modal = document.getElementById("image-modal");
+	const modalImg = document.getElementById("modal-image");
+	modal.style.display = "flex";
+	modalImg.src = imageSrc;
+	// Push a new state to history when modal is opened
+	history.pushState({ modal: 'open' }, 'Image Modal', '#image-modal');
+}
+
+function closeImageModal() {
+	const modal = document.getElementById("image-modal");
+	modal.style.display = "none";
+	// If the current history state indicates the modal is open, go back one step.
+	if (history.state && history.state.modal === 'open') {
+		history.back();
+	}
+}
+
+function checkCartState() {
+    const cartEmpty = cart.size === 0;
+    const clearCartSection = document.getElementById('clearCartButtonSection');
+    const showCartButton = document.getElementById('showCartBtn'); // شناسه دکمه سبد خرید در صفحه اصلی
+    
+    // 1. نمایش یا پنهان کردن دکمه هشدار "سبد خرید دارای محصول است"
+    if (cartEmpty) {
+        clearCartSection.style.display = 'none';
+    } else {
+        clearCartSection.style.display = 'flex';
+    }
+    
+    // 2. تغییر رنگ دکمه اصلی سبد خرید
+    if (showCartButton) {
+        if (cartEmpty) {
+            showCartButton.classList.remove('cart-has-items');
+        } else {
+            showCartButton.classList.add('cart-has-items');
+        }
+    }
+}
+// تابع اعتبارسنجی و پاکسازی سبد خرید از محصولات حذف شده (جدید)
+function cleanCartOfInvalidItems() {
+    let changed = false;
+    
+    // روی تمام آیتم‌های ذخیره شده در سبد خرید تکرار می‌کنیم
+    Array.from(cart.entries()).forEach(([itemUniqueId, cartItem]) => {
+        // شناسه منحصر به فرد کالا (مانند '1-A123.jpg') را به شناسه گروه و نام فایل تقسیم می‌کنیم
+        const [groupId, filename] = itemUniqueId.split('-');
+        
+        // 1. بررسی می‌کنیم که آیا شناسه گروه (groupId) هنوز در لیست محصولات اصلی (groupInfo) وجود دارد؟
+        const group = groupInfo[groupId];
+        if (!group) {
+            cart.delete(itemUniqueId); // اگر گروه حذف شده، کالا را از سبد حذف کن
+            changed = true;
+            console.warn(`Removed item ${itemUniqueId}: Group ID ${groupId} no longer exists.`);
+            return; // به آیتم بعدی سبد برو
+        }
+        
+        // 2. بررسی می‌کنیم که آیا فایل/محصول خاص (filename) هنوز در داخل آن گروه وجود دارد؟
+        const productExists = group.images.some(img => img.filename === filename);
+        if (!productExists) {
+            cart.delete(itemUniqueId); // اگر محصول خاص حذف شده، کالا را از سبد حذف کن
+            changed = true;
+            console.warn(`Removed item ${itemUniqueId}: Filename ${filename} no longer exists in Group ${groupId}.`);
+        }
+    });
+
+    // اگر تغییری در سبد خرید ایجاد شد، آن را ذخیره کرده و وضعیت صفحه را به‌روزرسانی می‌کنیم
+    if (changed) {
+        saveCart(); // ذخیره سبد خرید تمیز شده در localStorage
+        checkCartState(); // به‌روزرسانی وضعیت دکمه‌های سبد خرید در صفحه
+        console.log('Cart cleaned up. Invalid items removed.');
+    }
+}
+
+
+function handleLoad() {
+    const initialHash = window.location.hash.substring(1);
+
+    // 1. پاکسازی سبد خرید از آیتم‌های نامعتبر قبل از هر عملیات نمایش یا رندر (جدید)
+    cleanCartOfInvalidItems(); 
+    
+    if (initialHash && screens[initialHash]) {
+        showScreen(initialHash);
+    } else {
+        showScreen('main');
+    }
+    history.replaceState({ screen: initialHash || 'main' }, '', `#${initialHash || 'main'}`);
+    renderCartList();
+    loadCustomerInfo();
+    checkCartState();
+    
+    // ** فراخوانی تابع نوتیفیکیشن در زمان بارگذاری کامل صفحه **
+    showWelcomeNotification('به فروشگاه پوستر ایران خوش آمدید.');
+
+    document.getElementById('enterAsUserBtn').addEventListener('click', () => { showScreen('gallery'); });
+    document.getElementById('showCartBtn').addEventListener('click', () => showScreen('cart'));
+    document.getElementById('clearCartMainBtn').addEventListener('click', () => clearCart());
+    document.getElementById('loginAsAdminBtn').addEventListener('click', () => loginAsAdmin());
+    document.getElementById('bottomGroupSelect').addEventListener('change', (e) => loadGroup(e.target.value));
+    document.getElementById('showHomeGalleryBtn').addEventListener('click', () => showScreen('main'));
+    document.getElementById('showCartGalleryBtn').addEventListener('click', () => showScreen('cart'));
+    document.getElementById('submitOrderBtn').addEventListener('click', () => submitOrderWithWhatsApp());
+    document.getElementById('clearCartCartBtn').addEventListener('click', () => clearCart());
+    document.getElementById('showGalleryCartBtn').addEventListener('click', () => showScreen('gallery'));
+    document.getElementById('showPreviousOrdersBtn').addEventListener('click', () => openPreviousOrdersModal());
+}
+
+// Previous Orders Modal Functions
+function openPreviousOrdersModal() {
+    const modal = document.getElementById("previous-orders-modal");
+    const list = document.getElementById("previousOrdersList");
+    list.innerHTML = "";
+
+    const ordersHistory = JSON.parse(localStorage.getItem('previousOrders') || '[]');
+
+    if (ordersHistory.length === 0) {
+        list.innerHTML = "<p>شما هیچ سفارش قبلی ندارید.</p>";
+    } else {
+        ordersHistory.reverse().forEach(order => {
+            const orderDiv = document.createElement("div");
+            orderDiv.className = "previous-order-item";
+
+            let orderDetails = `<p><strong>تاریخ سفارش:</strong> ${order.date}</p>`;
+            orderDetails += `<p><strong>مبلغ کل:</strong> ${order.totalPrice.toLocaleString()} ریال</p>`;
+            
+            const groupedOrderItems = order.items.reduce((acc, item) => {
+                if (!acc[item.groupName]) {
+                    acc[item.groupName] = [];
+                }
+                acc[item.groupName].push(item);
+                return acc;
+            }, {});
+
+            orderDetails += `<ul>`;
+            for (const groupName in groupedOrderItems) {
+                if (groupedOrderItems.hasOwnProperty(groupName)) {
+                    orderDetails += `<li><strong>${groupName}:</strong></li>`;
+                    groupedOrderItems[groupName].forEach(item => {
+                        orderDetails += `<ul><li>${item.name} (${item.qty} عدد)</li></ul>`;
+                    });
+                }
+            }
+            orderDetails += `</ul>`;
+            
+            orderDiv.innerHTML = `
+                <h4>سفارش شماره: ${order.id}</h4>
+                ${orderDetails}
+                <div class="previous-order-buttons">
+                    <button onclick="reorderPreviousOrder(${order.id})">سفارش مجدد</button>
+                    <button class="delete-btn" onclick="deletePreviousOrder(${order.id})">حذف سفارش</button>
+                </div>
+            `;
+            list.appendChild(orderDiv);
+        });
+    }
+
+    modal.style.display = "flex";
+    if (history.state === null || history.state.modal !== 'previous-orders-open') {
+      history.pushState({ modal: 'previous-orders-open' }, 'Previous Orders Modal', '#previous-orders-modal');
+    }
+}
+
+function closePreviousOrdersModal() {
+    const modal = document.getElementById("previous-orders-modal");
+    modal.style.display = "none";
+    if (history.state && history.state.modal === 'previous-orders-open') {
+      history.back();
+    }
+}
+
+function reorderPreviousOrder(orderId) {
+    const ordersHistory = JSON.parse(localStorage.getItem('previousOrders') || '[]');
+    const orderToReorder = ordersHistory.find(order => parseInt(order.id) === orderId);
+    let invalidItemsCount = 0; // شمارنده برای اطلاع‌رسانی به کاربر
+    
+    if (orderToReorder) {
+        cart.clear(); // پاک کردن سبد خرید فعلی
+        
+        orderToReorder.items.forEach(item => {
+            const itemUniqueId = `${item.groupId}-${item.filename}`;
+            
+            // --- شروع بررسی اعتبار ---
+            const group = groupInfo[item.groupId];
+            
+            // 1. بررسی وجود Group ID 
+            if (!group) {
+                invalidItemsCount++;
+                console.warn(`Skipped reorder item ${itemUniqueId}: Group ID ${item.groupId} no longer exists.`);
+                return;
+            }
+            
+            // 2. بررسی وجود فایل (محصول) در داخل گروه
+            const productExists = group.images.some(img => img.filename === item.filename);
+            if (!productExists) {
+                invalidItemsCount++;
+                console.warn(`Skipped reorder item ${itemUniqueId}: Filename ${item.filename} no longer exists in Group ${item.groupId}.`);
+                return;
+            }
+            // --- پایان بررسی اعتبار ---
+            
+            // اگر معتبر است، به سبد خرید اضافه کن
+            cart.set(itemUniqueId, item);
+        });
+        
+        
+        
+        saveCart();
+        closePreviousOrdersModal();
+        
+        // نمایش نوتیفیکیشن مشروط
+        if (invalidItemsCount > 0) {
+            showNotification(`سفارش شماره ${orderId} به سبد خرید اضافه شد. (${invalidItemsCount} محصول نامعتبر/حذف شده نادیده گرفته شد.)`);
+        } else {
+            showNotification(`سفارش شماره ${orderId} به سبد خرید اضافه شد.`);
+        }
+        
+        showScreen('cart');
+    } else {
+        showNotification('سفارش مورد نظر یافت نشد.');
+    }
+}
+
+function deletePreviousOrder(orderId) {
+    if (confirm(`آیا از حذف سفارش شماره ${orderId} مطمئن هستید؟`)) {
+        let ordersHistory = JSON.parse(localStorage.getItem('previousOrders') || '[]');
+        ordersHistory = ordersHistory.filter(order => parseInt(order.id) !== orderId);
+        localStorage.setItem('previousOrders', JSON.stringify(ordersHistory));
+        showNotification(`سفارش شماره ${orderId} حذف شد.`);
+        // Re-render the modal to show the updated list
+        openPreviousOrdersModal();
+    }
+}
+
+
+window.addEventListener('load', handleLoad);
+// Add a listener for the browser's popstate event (back button)
+window.addEventListener('popstate', function(event) {
+	const imageModal = document.getElementById("image-modal");
+  const previousOrdersModal = document.getElementById("previous-orders-modal");
+
+	// If the image modal is open and the state is not the one we pushed, close it.
+	if (imageModal.style.display === 'flex' && (!event.state || event.state.modal !== 'open')) {
+		closeImageModal();
+	}
+  // If the previous orders modal is open and the state is not the one we pushed, close it.
+  if (previousOrdersModal.style.display === 'flex' && (!event.state || event.state.modal !== 'previous-orders-open')) {
+    closePreviousOrdersModal();
+  }
+});
+
+</script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js?v=4.3').then(function(registration) {
+                console.log('✅ Service Worker ثبت شد: ', registration.scope);
+            }).catch(function(error) {
+                console.log('❌ ثبت Service Worker شکست خورد:', error);
+            });
+        });
+    }
+</script>
+<script src="live-reload.js"></script>
+
 </body>
 </html>
