@@ -2,10 +2,27 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>پوستر ایران - گالری تصاویر</title>
+  <title>پوستر ایران</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" href="/icons/favicon.ico?v=1.0" type="image/x-icon">
+  <link rel="shortcut icon" href="/icons/favicon.ico?v=1.0" type="x-icon">
+
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png?v=1.0">
+  <link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167x167.png?v=1.0">
+
+  <link rel="manifest" href="/icons/manifest.json?v=1.0">
+  <meta name="theme-color" content="#2196f3">
+
   <meta property="og:title" content="پوستر ایران">
-  <meta property="og:description" content="گالری تصاویر پوستر">
+  <meta property="og:description" content="چاپ انواع پوسترهای آموزشی">
+  <meta property="og:image" content="/icons/og-image.jpg?v=1.0">
+  <meta property="og:url" content="https://akbari5561.github.io/PosterIran/">
 
   <style>
 /* Import Vazirmatn font from Google Fonts */
@@ -16,33 +33,36 @@
       direction: rtl;
       background: #E3F2FD; /* Softer background */
       color: #333;
-      padding: 0; 
-      margin: 0; 
+      padding: 5000; /* Remove default body padding */
+      margin: 5000; /* Remove default body margin */
       display: flex;
       flex-direction: column;
       min-height: 100vh; /* Ensure body takes full viewport height */
       align-items: center; /* Center content horizontally */
+      justify-content: center; /* Center content vertically */
     }
 
     /* Enhanced Hero Section for the main page */
     #mainSection {
-        flex-shrink: 0; /* Prevent from shrinking */
+        margin-top: 0; /* Remove default margin from old style */
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         max-width: 900px; /* Max width for content */
-        padding: 40px 20px 20px; /* More padding */
+        padding: 40px 20px; /* More padding */
         box-sizing: border-box;
-        background: linear-gradient(135deg, #BA68C8 20%, #6A1B9A 100%); /* Purple gradient background */
-        border-radius: 0 0 20px 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+        background: linear-gradient(135deg, #BA68C8 20%, #6A1B9A 100%); /* Blue gradient background */
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* More prominent shadow */
         text-align: center;
         position: relative;
-        overflow: hidden; 
-        margin-bottom: 20px; /* Space before gallery */
+        overflow: hidden; /* Hide overflowing pseudo-elements */
     }
+
+    /* Animated background circles (optional, for extra graphical appeal) */
     
     #mainSection::before {
         content: '';
@@ -50,28 +70,31 @@
         border-radius: 50%;
         background: #FFFFFF;
         animation: bubble 30s infinite ease-in-out alternate;
+    }
+    #mainSection::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: #FFFFFF;
+    animation: bubble 15s infinite ease-in-out alternate;
+}
+    #mainSection::before {
         width: 150px; height: 150px;
         top: -50px; left: -50px;
         animation-delay: 0s;
     }
     #mainSection::after {
-        content: '';
-        position: absolute;
-        border-radius: 50%;
-        background: #FFFFFF;
-        animation: bubble 15s infinite ease-in-out alternate;
         width: 200px; height: 200px;
         bottom: -60px; right: 190px;
         animation-delay: 0s;
     }
     @keyframes bubble {
-        0% { transform: scale(1.4) translate(0, 0); opacity: 0.17; }
+        0% { transform: scale(1.4) translate(0, 0); opacity: 100.17; }
         50% { transform: scale(1.2) translate(70px, -40px); opacity: 0.9; }
         100% { transform: scale(0.8) translate(0, 0); opacity: 0.7; }
     }
-    
     .main-title-container {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding: 15px 30px;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 10px;
@@ -80,73 +103,111 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column; 
-        position: relative; 
-        z-index: 1; 
+        flex-direction: column; /* Stack logo, h1, h2 */
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
+        
     }
 
     .header-logo {
-        max-width: 130px; 
+        max-width: 130px; /* Adjusted size for the new layout */
         height: auto;
-        margin-bottom: -10px; 
+        margin-bottom: -10px; /* Space between logo and title */
     }
 
     h1 {
-        color: #060606; 
-        font-size: 2em; 
-        margin: 0; 
+        color: #060606; /* Deeper blue for main title */
+        font-size: 2em; /* Larger font size */
+        margin: 0; /* Remove default margin */
         text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         letter-spacing: 1.5px;
     }
-    p {
+    h2 {
+        color: #FFFFFF; /* Slightly lighter blue for subtitle */
+        font-size: 1.2em;
+        margin-top: 10px; /* Space below h1 */
+        margin-bottom: 0px; /* No extra space below h2 */
+        
+    }
+    #subtitle {
+        font-size: 0.8em;
         color: #0D0D0E;
-        font-size: 1em;
-        margin: 5px 0;
-        position: relative; 
-        z-index: 1; 
+        margin-top: 5px;
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
     }
     #address {
         background: rgba(255, 255, 255, 1);
         padding: 8px;
         border-radius: 10px;
-        margin-top: 15px;
+        margin-top: 30px;
         box-shadow: 0 2px 10px rgba(1, 1, 15, 0.78);
         line-height: 1.8;
-        position: relative; 
-        z-index: 1; 
+        position: relative; /* Ensure it's above pseudo-elements */
+        z-index: 1; /* Bring to front */
+    }
+    #address p {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #444;
     }
     #address a {
-        color: #444; 
+        color: #444; /* Darker blue for links */
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s ease;
     }
     #address a:hover {
-        color: #1976D2;
-    }
-    
-    /* Main gallery styling */
-    #gallery {
-        display: flex; /* Changed from none to flex */
-        flex-direction: column; 
-        width: 100%;
-        max-width: 900px;
-        padding: 0 20px;
-        box-sizing: border-box;
+        color: #1976d2;
     }
 
+    #loginSection {
+        margin-top: 40px;
+        display: flex;
+        gap: 20px; /* Space between buttons */
+        position: relative; /* Add this */
+        z-index: 2; /* Add this: Higher z-index to be above pseudo-elements */
+    }
+    button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    box-shadow: 0  2px 5px rgba(1, 1, 5);
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    button:hover {
+      background-color: #1976d2;
+      transform: translateY(-3px); /* Lift effect on hover */
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    /* Main sections styling */
+    #gallery {
+        margin-top: 20px;
+        flex-grow: 1; /* Allow sections to take available space */
+        display: none; /* Hidden by default, controlled by JS */
+        flex-direction: column; /* For consistent layout */
+    }
+    
+    /* Admin login is hidden by default, shown by JS only on title click */
+    #adminLogin {
+        display: none;
+    }
     .image-box {
       background: white;
       padding: 10px;
       border-radius: 10px;
-      box-shadow: 0 0 5px #6A1B9A;
+      box-shadow: 0 0 5px #01579B;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       width: calc(50% - 15px); /* Default for 2 items per row with gap */
       box-sizing: border-box; /* Include padding/border in width */
-      cursor: pointer;
     }
 
     .image-container {
@@ -155,17 +216,16 @@
       justify-content: center;
       gap: 10px;
       margin-top: 20px;
-      margin-bottom: 20px;
       flex-grow: 1; /* Allow container to grow */
     }
 
     img {
       width: 100%;
-      height: auto; 
+      height: auto; /* Reverted to auto for original aspect ratio */
       border-radius: 8px;
       margin-bottom: 10px;
     }
-    
+
     /* Style for the Group Selection dropdown */
     .group-select-fixed {
     width: 150px;   /* عرض ثابت برای دروپ‌داون گروه */
@@ -181,8 +241,8 @@
     /* Controls at the top/bottom of gallery */
   .gallery-controls {
       display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-wrap: wrap; /* اجازه می‌دهیم آیتم‌ها به خط بعدی شکسته شوند */
+    justify-content: center; /* آیتم‌ها را در مرکز قرار می‌دهد */
     align-items: center;
     width: 100%;
     padding: 10px 0;
@@ -190,45 +250,69 @@
     border-top: 1px solid #c3d4e6;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
     z-index: 1000;
-    gap: 10px; 
+    gap: 10px; /* فاصله بین آیتم‌های اصلی فلکس (wrapper و دکمه) */
 }
   .group-selection-wrapper {
-      display: flex; 
+      display: flex; /* این div خودش یک فلکس‌کانتینر می‌شود */
       align-items: center;
-      gap: 5px; 
-      margin: 5px 10px;
+      gap: 5px; /* فاصله بین لیبل و سلکت دروپ‌داون */
+      margin-right: 10px; /* فاصله از دکمه "سبد خرید" (اگر در یک ردیف باشد) */
   }
+    #gallery-bottom-controls {
+        margin-top: auto; /* Push to bottom of gallery content */
+        position: sticky; /* Make it sticky */
+        bottom: 0; /* Stick to the bottom */
+        left: 0;
+        right: 0;
+        border-bottom: none; /* No bottom border for the very bottom one */
+    }
+    #gallery-top-controls {
+        margin-bottom: 10px;
+        border-top: none; /* No top border for the very top one */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Shadow at the bottom */
+    }
+    .gallery-controls button {
+        margin: 0;
+    }
     
-    /* CSS برای مودال بزرگنمایی */
+@media (max-width: 600px) {
+    .image-box {
+        width: calc(50% - 5px); /* Changed for two-column layout on mobile */
+    }
+   .gallery-controls {
+    display: flex; /* مطمئن شوید که flexbox فعال است */
+    flex-wrap: wrap; /* اجازه می‌دهد آیتم‌ها به سطر بعدی منتقل شوند */
+    gap: 10px; /* فاصله بین آیتم‌ها */
+    justify-content: space-around; /* یا center برای تراز وسط */
+    align-items: flex-start; /* یا stretch بسته به نیاز */
+}
+
+/* برای هر آیتم داخل gallery-controls */
+.gallery-controls > * {
+    flex: 1 1 100%; /* یک آیتم در هر سطر */
+    max-width: 100%; /* اطمینان از عدم تجاوز از 50% */
+    box-sizing: border-box; /* برای جلوگیری از مشکلات پدینگ/بردر با عرض */
+}
+
+    .group-selection-wrapper {
+        width: calc(100% - 20px); /* در موبایل، wrapper هم تمام عرض شود */
+        justify-content: center; /* محتوای wrapper در موبایل وسط‌چین شود */
+        margin-right: 0; /* مارجین حذف شود */
+    }
+    .gallery-controls button {
+        width: calc(100% - 20px);
+    }
+}
+  /* CSS برای مودال بزرگنمایی */
   .modal-content {
     animation-name: zoom;
     animation-duration: 0.6s;
-  }
-  .modal-content-img {
-      margin: auto; 
-      display: block; 
-      max-width: 90%; 
-      max-height: 90vh;
   }
 
   @keyframes zoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
   }
-  
-@media (max-width: 600px) {
-    .image-box {
-        width: calc(50% - 5px); /* Two-column layout on mobile */
-    }
-    .gallery-controls {
-        flex-direction: column;
-    }
-    .group-selection-wrapper {
-        width: 100%;
-        justify-content: center;
-        margin: 5px 0;
-    }
-}
   </style>
   
 </head>
@@ -237,39 +321,51 @@
 <div id="mainSection">
   <div class="main-title-container">
     <img src="https://akbari5561.github.io/PosterIran/icons/apple-touch-icon-180x180.png" alt="Poster Iran Logo" class="header-logo"> <h1>پوستر ایران</h1>
-    <p id="subtitle">گالری پوسترهای آموزشی</p>
+    <p id="subtitle">چاپ انواع پوسترهای آموزشی</p>
   </div>
   <div id="address">
-    <p>تهران : خیابان پانزده خرداد، بازار آهنگران ، کوچه مسجد جامع</p>
+    <p>تهران : خیابان پانزده خرداد</p>
+    <p>بازار آهنگران ، کوچه مسجد جامع</p>
     <p>پاساژ کاغذ و تحریر ، زیرزمین اول  پلاک۷۴</p>
     <p> <a href="https://maps.google.com/?cid=1396884775989221050&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" style="text-decoration: none; color: #1976d2; font-weight: bold;">  (مشاهده در نقشه)</a></p>
     <p>تلفـن : ۰۲۱۵۵۶۱۱۸۷۵</p>
     <p>موبایل : ۰۹۰۱۰۱۹۵۸۸۵</p>
   </div>
+  <div id="loginSection">
+    <button onclick="enterAsUser()">ورود به گالری</button>
+    <a href="https://wa.me/989010195885" target="_blank" style="text-decoration: none;">
+      <button style="background-color: #25D366; box-shadow: 0 2px 5px rgba(0, 100, 0, 0.5);">
+        ارتباط با واتس‌آپ 🟢
+      </button>
+    </a>
+  </div>
 </div>
 
 <div id="gallery">
-    <div id="gallery-top-controls" class="gallery-controls">
-        <div class="group-selection-wrapper"> 
-            <label for="topGroupSelect">انتخاب گروه :</label>
-            <select id="topGroupSelect" class="group-select-fixed" onchange="changeGroup(this.value)">
-                <option value="1">سایز ۲۹×۲۱ دوروچاپ</option>
-                <option value="2">سایز ۵۰×۳۵ یکروچاپ</option>
-                <option value="3">سایز ۵۰×۳۵ دوروچاپ</option>
-                <option value="4">سایز ۷۰×۵۰ یکروچاپ</option>
-                <option value="5">سایز ۷۰×۵۰ یووی‌دار</option>
-                <option value="6">سایر محصولات</option>
-            </select>
-        </div>
+  <div id="gallery-top-controls" class="gallery-controls">
     </div>
-    
+  
   <div id="imagesContainer" class="image-container"></div>
-
+  
+  <div id="gallery-bottom-controls" class="gallery-controls">
+    <div class="group-selection-wrapper"> 
+      <label for="bottomGroupSelect">انتخاب گروه :</label>
+      <select id="bottomGroupSelect" class="group-select-fixed" onchange="changeGroup(this.value)">
+        <option value="1">سایز ۲۹×۲۱ دوروچاپ</option>
+        <option value="2">سایز ۵۰×۳۵ یکروچاپ</option>
+        <option value="3">سایز ۵۰×۳۵ دوروچاپ</option>
+        <option value="4">سایز ۷۰×۵۰ یکروچاپ</option>
+        <option value="5">سایز ۷۰×۵۰ یووی‌دار</option>
+        <option value="6">سایر محصولات</option>
+      </select>
+    </div>
+    <button onclick="showScreen('main')">بازگشت به صفحه اصلی</button>
+  </div>
 </div>
 
 <div id="imageModal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);">
   <span class="close-button" style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">×</span>
-  <img class="modal-content-img" id="modalImage">
+  <img class="modal-content" id="modalImage" style="margin: auto; display: block; max-width: 90%; max-height: 90vh;">
   <div id="caption" style="margin: auto; display: block; width: 80%; text-align: center; color: #ccc; padding: 10px 0; height: 150px;"></div>
 </div>
 
@@ -307,28 +403,88 @@ const groupInfo = {
             { filename: "دفترچه ای بزرگ دوستی.jpeg", name: "دفترچه ای بزرگ دوستی" },
             { filename: "فلش کارت اعداد.jpeg", name: "فلش کارت اعداد" },
         ],
-        type: "variable-count", 
     }
 };
 
+// --- Screen Management ---
+const screens = {
+    main: document.getElementById('mainSection'),
+    gallery: document.getElementById('gallery'),
+};
+
+function showScreen(screenName) {
+    // Hide all screens
+    for (let key in screens) {
+        screens[key].style.display = 'none';
+    }
+
+    // Show the requested screen
+    screens[screenName].style.display = 'flex'; // Use flex for these sections
+
+    // Update history for back button support
+    if (history.state === null || history.state.screen !== screenName) {
+        history.pushState({ screen: screenName }, '', `#${screenName}`);
+    }
+
+    // Specific actions for each screen
+    if (screenName === 'gallery') {
+        const currentGroupId = document.getElementById('bottomGroupSelect').value; // Get current selected group
+        loadGroup(currentGroupId); // Reload current group
+    } 
+}
+
+// Handle browser's back button
+window.addEventListener('popstate', (event) => {
+    if (imageModal.style.display === 'block') { // If image modal is open, close it first
+        closeImageModal(false); 
+        if (event.state && event.state.modal === 'image') {
+        } else {
+            const targetScreen = event.state ? event.state.screen : 'main';
+            showScreen(targetScreen);
+        }
+    } else if (event.state && event.state.screen) {
+        // Restore previous screen based on history state
+        for (let key in screens) {
+            screens[key].style.display = 'none';
+        }
+        screens[event.state.screen].style.display = 'flex';
+        if (event.state.screen === 'gallery') {
+            const currentGroupId = document.getElementById('bottomGroupSelect').value;
+            loadGroup(currentGroupId);
+        } 
+    } else {
+        // Fallback to main screen if no state (e.g., initial load or direct URL)
+        showScreen('main');
+    }
+});
+
+
+function enterAsUser() {
+  showScreen('gallery');
+  // Sync selected group in both dropdowns
+  loadGroup(1); // Load the first group by default
+}
+
 
 function changeGroup(val) {
-  // Sync both dropdowns (only one exists now, but good practice)
-  document.getElementById('topGroupSelect').value = val;
+  // Sync both dropdowns when one changes
+  document.getElementById('bottomGroupSelect').value = val;
   loadGroup(parseInt(val));
 }
 
+
 function loadGroup(groupId) {
     const container = document.getElementById("imagesContainer");
-    container.innerHTML = ""; // Clear previous images
-    const info = groupInfo[groupId]; 
+    container.innerHTML = ""; // پاک کردن تصاویر قبلی
+    const info = groupInfo[groupId]; // این 'info' آبجکت گروه فعلی شماست
+    
+    // بررسی می‌کنیم که آیا این گروه از نوع 'images' هست یا نه (برای گروه 6)
+    const isVariableCountGroup = info.images !== undefined;
 
-    const isVariableCountGroup = info.type === 'variable-count';
-
-    // Create a unified array for products
+    // یک آرایه متحد برای محصولات ایجاد می‌کنیم تا حلقه forEach به صورت یکسان کار کنه
     const itemsToRender = isVariableCountGroup ? info.images : info.filenames.map(f => ({
         filename: f,
-        name: f.replace(/\.jpg$/, '').replace(/\.jpeg$/i, '')
+        name: f.replace(/\.jpg$/, '').replace(/\.jpeg$/i, ''), // حذف پسوند jpg یا jpeg
     }));
 
     itemsToRender.forEach(item => {
@@ -339,11 +495,9 @@ function loadGroup(groupId) {
 
         const box = document.createElement("div");
         box.className = "image-box";
-        box.setAttribute("onclick", `enlargeImage('${imagePath}', '${itemName}')`); // Add click handler to the box
         box.innerHTML = `
-            <img src="${imagePath}" alt="${itemName}">
-            <p style="font-weight: bold; margin-bottom: 0;">${itemName}</p> 
-            <p style="font-size: 0.8em; color: #6A1B9A;">${info.name}</p>
+            <img src="${imagePath}" alt="${itemName}" onclick="enlargeImage('${imagePath}', '${itemName}')">
+            <p style="font-weight: bold; margin-bottom: 5px;">${itemName}</p> 
         `;
         container.appendChild(box);
     });
@@ -352,7 +506,7 @@ function loadGroup(groupId) {
 }
 
 
-// --- Image Enlarge Functions ---
+// توابع بزرگنمایی تصویر
 const imageModal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 const captionText = document.getElementById('caption');
@@ -362,48 +516,58 @@ function enlargeImage(src, alt) {
   imageModal.style.display = 'block';
   modalImage.src = src;
   captionText.innerHTML = alt;
+  // برای جلوگیری از اسکرول شدن بدنه اصلی در حالت نمایش مودال
   document.body.style.overflow = 'hidden';
+  // Push a new state to history when the modal opens
   history.pushState({ modal: 'image' }, 'Image Enlarge', '#image-enlarged');
 }
 
 function closeImageModal(popHistory = true) {
   imageModal.style.display = 'none';
-  document.body.style.overflow = 'auto'; 
+  document.body.style.overflow = 'auto'; // بازگرداندن اسکرول بدنه
   if (popHistory) {
+      // Go back in history if this close was not triggered by a popstate
       if (history.state && history.state.modal === 'image') {
           history.back();
       }
   }
 }
 
-// Close modal with close button
+// بستن مودال با دکمه بستن
 closeButton.onclick = function() {
-  closeImageModal(true); 
+  closeImageModal(true); // Call with true to pop history state
 }
 
-// Close modal by clicking outside the image
+// بستن مودال با کلیک در هر جای خارج از تصویر
 imageModal.onclick = function(event) {
   if (event.target === imageModal) {
-    closeImageModal(true); 
+    closeImageModal(true); // Call with true to pop history state
   }
 }
 
-// Handle browser's back button
-window.addEventListener('popstate', (event) => {
-    if (imageModal.style.display === 'block') { 
-        closeImageModal(false); 
-    }
-});
-
 window.onload = function() {
-    loadGroup(1); // Load the first group by default
+    // Check if there's a specific screen in the URL hash, otherwise show 'main'
+    const initialHash = window.location.hash.substring(1); // Remove '#'
+    if (initialHash && screens[initialHash]) {
+        showScreen(initialHash);
+    } else {
+        showScreen('main');
+    }
+    history.replaceState({ screen: initialHash || 'main' }, '', `#${initialHash || 'main'}`);
 };
 
 </script>
-<script src="live-reload.js"></script>
-
-<footer style="text-align: center; margin-top: auto; padding: 20px; width: 100%; max-width: 900px;">
-    <p>All rights reserved for Poster Iran © 2025</p>
-</footer>
+</div>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js?v=6.9').then(function(registration) { /* اینجا ورژن را به روز کنید */
+                console.log('✅ Service Worker ثبت شد: ', registration.scope);
+            }).catch(function(error) {
+                console.log('❌ ثبت Service Worker شکست خورد:', error);
+            });
+        });
+    }
+</script>
 </body>
 </html>
