@@ -22,7 +22,7 @@
   <meta property="og:title" content="پوستر ایران">
   <meta property="og:description" content="چاپ انواع پوسترهای آموزشی">
   <meta property="og:image" content="/icons/og-image.jpg?v=1.0">
-  <meta property="og:url" content="https://akbari5561.github.io/PosterIran/">
+  <meta property="og:url" content="https://PosterIran.github.io/PosterIran/">
 
   <style>
 /* Import Vazirmatn font from Google Fonts */
@@ -330,6 +330,9 @@
     <p> <a href="https://maps.google.com/?cid=1396884775989221050&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" target="_blank" style="text-decoration: none; color: #1976d2; font-weight: bold;">  (مشاهده در نقشه)</a></p>
     <p>تلفـن : ۰۲۱۵۵۶۱۱۸۷۵</p>
     <p>موبایل : ۰۹۰۱۰۱۹۵۸۸۵</p>
+    <p style="font-weight: bold; color: #d32f2f; margin-top: 15px; border-top: 1px dashed #ccc; padding-top: 10px;">
+        * برای سفارش یا استعلام قیمت، از طریق واتس‌آپ یا تماس تلفنی اقدام نمایید.
+    </p>
   </div>
   <div id="loginSection">
     <button onclick="enterAsUser()">ورود به گالری</button>
@@ -428,7 +431,8 @@ function showScreen(screenName) {
 
     // Specific actions for each screen
     if (screenName === 'gallery') {
-        const currentGroupId = document.getElementById('bottomGroupSelect').value; // Get current selected group
+        // اکنون از دروپ‌داون پایینی مقدار گرفته می‌شود
+        const currentGroupId = document.getElementById('bottomGroupSelect').value; 
         loadGroup(currentGroupId); // Reload current group
     } 
 }
@@ -449,7 +453,7 @@ window.addEventListener('popstate', (event) => {
         }
         screens[event.state.screen].style.display = 'flex';
         if (event.state.screen === 'gallery') {
-            const currentGroupId = document.getElementById('bottomGroupSelect').value;
+            const currentGroupId = document.getElementById('bottomGroupSelect').value; // استفاده از bottomGroupSelect
             loadGroup(currentGroupId);
         } 
     } else {
@@ -461,14 +465,15 @@ window.addEventListener('popstate', (event) => {
 
 function enterAsUser() {
   showScreen('gallery');
-  // Sync selected group in both dropdowns
-  loadGroup(1); // Load the first group by default
+  // Explicitly set the initial value for the bottom dropdown and load the first group
+  const defaultGroup = '1';
+  document.getElementById('bottomGroupSelect').value = defaultGroup;
+  loadGroup(parseInt(defaultGroup)); 
 }
 
 
 function changeGroup(val) {
-  // Sync both dropdowns when one changes
-  document.getElementById('bottomGroupSelect').value = val;
+  // این تابع فقط توسط دروپ‌داون پایینی صدا زده می‌شود
   loadGroup(parseInt(val));
 }
 
